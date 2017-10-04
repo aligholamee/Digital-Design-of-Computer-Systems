@@ -15,4 +15,10 @@ It is a hardware description language used in electronic design automation to de
 3. Entity ports are available as **signals** through the architecture.
 4. Architecture consists of two major parts: **Declarative** part and **Statement** part.
 5. Declarative part contains: data types, constants, intermediate signals, component declarations and etc.
-6. Statement part(after 'begin') contains: Signal assignments, processes, component instantiations, concurrent statements
+6. Statement part(after 'begin') contains: Signal assignments, processes, component instantiations, concurrent statements.
+
+## Entity Port Modes
+* **in**: Signal values are read-only
+* **out**: Signal values are write-only + Multiple drivers
+* **buffer**: Similar to out + Signal values may be read from inside + Only 1 driver
+* **in-out**: Bidirectional port
