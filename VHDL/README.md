@@ -22,3 +22,8 @@ It is a hardware description language used in electronic design automation to de
 * **out**: Signal values are write-only + Multiple drivers
 * **buffer**: Similar to out + Signal values may be read from inside + Only 1 driver
 * **in-out**: Bidirectional port
+
+## Signal Association Techniques
+Signal association can be done in two ways:
+* **Positional Association**
+* **Named Association**
