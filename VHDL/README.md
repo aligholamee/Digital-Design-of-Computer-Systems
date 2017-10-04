@@ -27,3 +27,7 @@ It is a hardware description language used in electronic design automation to de
 Signal association can be done in two ways:
 * **Positional Association**
 * **Named Association**
+
+## VHDL Operational Aspects
+* Sequential Operation: Main commands are **if-then-else**, **for loops**, **while loop**, **case when**.
+* Concurrent Operation: Main commands are **Module Instantiation**, **Signal Assignment**, **if/for Generate**, **when/else**, **with-select-when**, **Function Call**, **Procedure Call**.
