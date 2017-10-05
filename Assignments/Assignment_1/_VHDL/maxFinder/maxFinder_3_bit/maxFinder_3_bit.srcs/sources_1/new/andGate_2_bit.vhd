@@ -32,12 +32,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity andGate_2_bit is
---  Port ( );
+  port(
+    A, B: in std_logic;
+    OUT: out std_logic
+  );
 end andGate_2_bit;
 
 architecture Gate of andGate_2_bit is
-
 begin
-
-
+  OUT <= A and B;
 end Gate;
