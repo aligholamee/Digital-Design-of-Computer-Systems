@@ -2,9 +2,9 @@
 -- Company: Amirkabir University of Technology
 -- Engineer: Ali Gholami(aligholamee)
 --
--- Create Date: 10/05/2017 11:34:15 PM
+-- Create Date: 10/05/2017 11:41:38 PM
 -- Design Name:
--- Module Name: andGate_2_bit - Gate
+-- Module Name: maxFinderModule_3_input - Gate
 -- Project Name:
 -- Target Devices:
 -- Tool Versions:
@@ -31,14 +31,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity andGate_2_bit is
+entity maxFinderModule_3_input is
   port(
-    A, B: in std_logic;
+    A, B, C: in std_logic;
     F_OUT: out std_logic
   );
-end andGate_2_bit;
+end maxFinderModule_3_input;
 
-architecture Gate of andGate_2_bit is
+architecture Gate of maxFinderModule_3_input is
+
 begin
-  OUT <= A and B;
+
+
 end Gate;

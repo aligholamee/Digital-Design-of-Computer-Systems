@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity orGate_3_bit is
   port(
     A, B, C: in std_logic;
-    OUT: out std_logic
+    F_OUT: out std_logic
   );
 end orGate_3_bit;
 
