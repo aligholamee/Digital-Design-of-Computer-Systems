@@ -40,5 +40,5 @@ end andGate_2_bit;
 
 architecture Gate of andGate_2_bit is
 begin
-  OUT <= A and B;
+  F_OUT <= A and B;
 end Gate;

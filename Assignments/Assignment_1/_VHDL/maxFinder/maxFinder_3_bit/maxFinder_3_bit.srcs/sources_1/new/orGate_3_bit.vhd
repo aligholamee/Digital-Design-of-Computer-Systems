@@ -40,5 +40,5 @@ end orGate_3_bit;
 
 architecture Gate of orGate_3_bit is
 begin
-  OUT <= A or B or C;
+  F_OUT <= A or B or C;
 end Gate;
