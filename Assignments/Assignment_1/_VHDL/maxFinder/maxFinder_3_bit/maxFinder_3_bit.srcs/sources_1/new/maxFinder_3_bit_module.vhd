@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami(aligholamee)
+--
 -- Create Date: 10/05/2017 09:51:49 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: maxFinder_3_bit_module - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -32,7 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity maxFinder_3_bit_module is
---  Port ( );
+  port(
+
+
+  );
 end maxFinder_3_bit_module;
 
 architecture Behavioral of maxFinder_3_bit_module is
