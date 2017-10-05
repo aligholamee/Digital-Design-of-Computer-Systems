@@ -2,9 +2,9 @@
 -- Company: Amirkabir University of Technology
 -- Engineer: Ali Gholami(aligholamee)
 --
--- Create Date: 10/05/2017 09:51:49 PM
+-- Create Date: 10/05/2017 11:34:15 PM
 -- Design Name:
--- Module Name: maxFinder_3_bit_module - Behavioral
+-- Module Name: orGate_3_bit - Gate
 -- Project Name:
 -- Target Devices:
 -- Tool Versions:
@@ -31,16 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity maxFinder_3_bit_module is
+entity orGate_3_bit is
   port(
-
-
+    A, B, C: in std_logic;
+    OUT: out std_logic
   );
-end maxFinder_3_bit_module;
+end orGate_3_bit;
 
-architecture Behavioral of maxFinder_3_bit_module is
-
+architecture Gate of orGate_3_bit is
 begin
-
-
-end Behavioral;
+  OUT <= A or B or C;
+end Gate;
