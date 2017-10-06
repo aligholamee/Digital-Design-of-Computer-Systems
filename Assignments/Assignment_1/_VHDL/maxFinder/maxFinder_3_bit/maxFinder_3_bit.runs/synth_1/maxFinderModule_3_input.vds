@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Fri Oct 06 10:54:09 2017
-# Process ID: 13008
+# Start of session at: Fri Oct 06 11:00:03 2017
+# Process ID: 2824
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.runs/synth_1
 # Command line: vivado.exe -log maxFinderModule_3_input.vds -mode batch -messageDb vivado.pb -notrace -source maxFinderModule_3_input.tcl
 # Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.runs/synth_1/maxFinderModule_3_input.vds
@@ -15,20 +15,223 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 306.340 ; gain = 134.762
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 306.078 ; gain = 134.379
 ---------------------------------------------------------------------------------
-ERROR: [Synth 8-2715] syntax error near F_OUT [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:82]
-ERROR: [Synth 8-2029] formal a has no actual or default value [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:78]
-INFO: [Synth 8-994] a is declared here [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:50]
-INFO: [Synth 8-994] b is declared here [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:50]
-INFO: [Synth 8-994] c is declared here [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:50]
-INFO: [Synth 8-2810] unit gate ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'maxFinderModule_3_input' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:41]
+INFO: [Synth 8-3491] module 'andGate_2_bit' declared at 'C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd:34' bound to instance 'AND_GATE_1' of component 'andGate_2_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'andGate_2_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'andGate_2_bit' (1#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd:41]
+INFO: [Synth 8-3491] module 'andGate_2_bit' declared at 'C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd:34' bound to instance 'AND_GATE_2' of component 'andGate_2_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:64]
+INFO: [Synth 8-3491] module 'andGate_2_bit' declared at 'C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd:34' bound to instance 'AND_GATE_3' of component 'andGate_2_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:70]
+INFO: [Synth 8-3491] module 'orGate_3_bit' declared at 'C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd:34' bound to instance 'OR_GATE' of component 'orGate_3_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'orGate_3_bit' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'orGate_3_bit' (2#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'maxFinderModule_3_input' (3#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd:41]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.508 ; gain = 161.930
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.250 ; gain = 162.551
 ---------------------------------------------------------------------------------
-synthesize failed
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.250 ; gain = 162.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.250 ; gain = 162.551
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 338.863 ; gain = 167.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 509.637 ; gain = 337.938
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 509.637 ; gain = 337.938
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 509.637 ; gain = 337.938
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     1|
+|2     |IBUF |     3|
+|3     |OBUF |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     5|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 518.691 ; gain = 248.863
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 518.691 ; gain = 346.992
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 INFO: [Common 17-83] Releasing license: Synthesis
-6 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 06 10:54:16 2017...
+19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 589.656 ; gain = 390.434
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 589.656 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 06 11:00:16 2017...

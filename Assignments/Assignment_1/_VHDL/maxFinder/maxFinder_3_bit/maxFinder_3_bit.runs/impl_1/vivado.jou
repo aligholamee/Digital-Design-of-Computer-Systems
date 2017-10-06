@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Oct 06 11:00:21 2017
+# Process ID: 11920
+# Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.runs/impl_1
+# Command line: vivado.exe -log maxFinderModule_3_input.vdi -applog -messageDb vivado.pb -mode batch -source maxFinderModule_3_input.tcl -notrace
+# Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.runs/impl_1/maxFinderModule_3_input.vdi
+# Journal file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source maxFinderModule_3_input.tcl -notrace

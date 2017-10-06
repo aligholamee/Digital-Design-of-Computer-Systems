@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd"
+vhdl xil_defaultlib  "../../../maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd"
+vhdl xil_defaultlib  "../../../maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd"
+
+# Do not sort compile order
+nosort
