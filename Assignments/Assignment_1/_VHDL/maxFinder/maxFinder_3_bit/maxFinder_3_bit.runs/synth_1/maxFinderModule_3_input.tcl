@@ -15,6 +15,7 @@ set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kc705:part0:1.2 [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_vhdl -library xil_defaultlib {
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd}
   {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd}
   {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd}
 }
