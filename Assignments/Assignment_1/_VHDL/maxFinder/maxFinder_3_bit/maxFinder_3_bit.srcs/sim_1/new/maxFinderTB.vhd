@@ -52,5 +52,21 @@ begin
     c => abc[0],
     F_OUT => maxOutput
   );
-
+process
+  begin
+    abc <= "001";
+    wait for 100 ns;
+    abc <= "010";
+    wait for 100 ns;
+    abc <= "011";
+    wait for 100 ns;
+    abc <= "100";
+    wait for 100 ns;
+    abc <= "101";
+    wait for 100 ns;
+    abc <= "110";
+    wait for 100 ns;
+    abc <= "111";
+    wait;
+ end process;
 end Gate;
