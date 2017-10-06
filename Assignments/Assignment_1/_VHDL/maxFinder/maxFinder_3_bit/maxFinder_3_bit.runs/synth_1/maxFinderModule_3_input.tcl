@@ -14,7 +14,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kc705:part0:1.2 [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-read_vhdl -library xil_defaultlib {{C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd}}
-synth_design -top orGate_3_bit -part xc7k325tffg900-2
-write_checkpoint -noxdef orGate_3_bit.dcp
-catch { report_utilization -file orGate_3_bit_utilization_synth.rpt -pb orGate_3_bit_utilization_synth.pb }
+read_vhdl -library xil_defaultlib {
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd}
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd}
+}
+synth_design -top maxFinderModule_3_input -part xc7k325tffg900-2
+write_checkpoint -noxdef maxFinderModule_3_input.dcp
+catch { report_utilization -file maxFinderModule_3_input_utilization_synth.rpt -pb maxFinderModule_3_input_utilization_synth.pb }

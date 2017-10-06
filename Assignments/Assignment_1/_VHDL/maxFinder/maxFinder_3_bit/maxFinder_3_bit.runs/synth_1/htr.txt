@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log orGate_3_bit.vds -m64 -mode batch -messageDb vivado.pb -notrace -source orGate_3_bit.tcl
+vivado -log maxFinderModule_3_input.vds -m64 -mode batch -messageDb vivado.pb -notrace -source maxFinderModule_3_input.tcl

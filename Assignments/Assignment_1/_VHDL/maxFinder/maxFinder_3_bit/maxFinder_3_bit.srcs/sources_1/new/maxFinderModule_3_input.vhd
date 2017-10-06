@@ -57,29 +57,25 @@ architecture Gate of maxFinderModule_3_input is
   signal ciruit_output: std_logic;
 
 begin
-  MODULE AND_GATE_1:andGate_2_bit
-  port map(
+  AND_GATE_1:andGate_2_bit port map(
     A => input1,
     B => input2,
     F_OUT => AND1_RES
   );
 
-  MODULE AND_GATE_2:andGate_2_bit
-  port map(
+  AND_GATE_2:andGate_2_bit port map(
     A => input2,
     B => input3,
     F_OUT => AND2_RES
   );
 
-  MODULE AND_GATE_3:andGate_2_bit
-  port map(
+  AND_GATE_3:andGate_2_bit port map(
     A => input1,
     B => input3,
     F_OUT => AND3_RES
   );
 
-  MODULE OR_GATE:orGate_3_bit
-  port map(
+  OR_GATE:orGate_3_bit port map(
     A => AND1_RES,
     B => AND2_RES,
     C => AND3_RES
