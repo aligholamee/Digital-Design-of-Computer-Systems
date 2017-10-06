@@ -47,9 +47,9 @@ architecture Gate of maxFinderTB is
     signal maxOutput: std_logic;
 begin
   TB1: maxFinderTB port map(
-    A => abc[2],
-    B => abc[1],
-    c => abc[0],
+    A => abc(2),
+    B => abc(1),
+    c => abc(0),
     F_OUT => maxOutput
   );
 process
