@@ -39,6 +39,18 @@ entity maxFinderModule_3_input is
 end maxFinderModule_3_input;
 
 architecture Gate of maxFinderModule_3_input is
+  component andGate_2_bit is
+    port(
+      A, B: in std_logic;
+      F_OUT: out std_logic
+    );
+  end component;
+  component orGate_3_bit is
+    port(
+      A, B, C: in std_logic;
+      F_OUT: out std_logic
+    );
+  end component;
 
 begin
 
