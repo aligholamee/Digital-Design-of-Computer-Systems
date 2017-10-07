@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/andGate_2_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity andGate_2_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/orGate_3_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity orGate_3_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sources_1/new/maxFinderModule_3_input.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity maxFinderModule_3_input
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/Assignments/Assignment_1/_VHDL/maxFinder/maxFinder_3_bit/maxFinder_3_bit.srcs/sim_1/new/maxFinderTB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity maxFinderTB
