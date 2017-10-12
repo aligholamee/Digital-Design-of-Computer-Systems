@@ -31,3 +31,14 @@ Signal association can be done in two ways:
 ## VHDL Operational Aspects
 * Sequential Operation: Main commands are **if-then-else**, **for loops**, **while loop**, **case when**.
 * Concurrent Operation: Main commands are **Module Instantiation**, **Signal Assignment**, **if/for Generate**, **when/else**, **with-select-when**, **Function Call**, **Procedure Call**.
+
+## Types & Sub-Types
+VHDL Types at a glance are defined here:
+* bit
+* bit_vector
+* integer -> Arithmetic operations on Z
+* boolean -> Logical operations and conditions
+* character
+* string
+* real -> Operations on the real numbers
+* time -> Delay representation and waveform generation
