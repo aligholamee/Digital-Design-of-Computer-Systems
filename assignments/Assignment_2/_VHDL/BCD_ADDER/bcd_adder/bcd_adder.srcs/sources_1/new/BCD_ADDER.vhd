@@ -65,6 +65,7 @@ architecture Structural of BCD_ADDER is
     port(
       A: in std_logic;
       B: in std_logic;
+      C: in std_logic;
       res: out std_logic
     );
   end component;
@@ -73,23 +74,33 @@ architecture Structural of BCD_ADDER is
 begin
   -------------------------------------------
   MODULE1: FOUR_BIT_FA
-    
-  );
+    port map(
+      input_1 => c1;
+      input_2 => c2;
+      bcd_output => c3;
+      carry_in => 0;
+      carry_out => c4
+    );
 
   MODULE2: andGate
   port map(
-
+      A => bcd_output(3);
+      B => bcd_output(2);
+      res => firstAndRes
   );
 
   MODULE3: andGate
   port map(
-
+    A => bcd_output(3);
+    B => bcd_output(1);
+    res => secondAndRes
   );
 
   MODULE4: orGate
   port map(
-
+    A => firstAndRes;
+    B => secondAndRes
+    C => c4
   );
-
   -------------------------------------------
 end Structural;
