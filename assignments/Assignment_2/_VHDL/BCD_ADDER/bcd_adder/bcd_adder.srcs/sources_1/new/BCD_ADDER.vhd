@@ -22,7 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.common.all;
-use work.FULL_ADDER;
+use work.orGate;
+use work.andGate;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,33 +33,41 @@ use work.FULL_ADDER;
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
-
 entity BCD_ADDER is
     port(
-        input_1: in bcd_number;
-        input_2: in bcd_number;
-        bcd_output: out bcd_number;
+        input_1: in bcd_number;       -- The input will be a number of 3 digit BCD
+        input_2: in bcd_number;       -- The input will be a number of 3 digit BCD
+        bcd_output: out bcd_number;   -- The output will be a number of 3 digit BCD
         carry_out: out bcd_number;
         carry_in: in bcd_number);
 end entity BCD_ADDER;
 
 architecture Structural of BCD_ADDER is
-  component FULL_ADDER
+    -- Using 3 4 bit full adders
+  component FOUR_BIT_FA is
     port(
-      A, B, CARRY_IN: in std_logic;
-      SUM, CARRY_OUT: out std_logic
+      A: in std_logic_vector (3 downto 0);
+      B: in std_logic_vector (3 downto 0);
+      Carry_in: in std_logic;
+      Carry_out: out std_logic;
+      Sum: out std_logic_vector (3 downto 0)
+    );
+  end component;
+  component andGate is
+    port(
+      A: in std_logic;
+      B: in std_logic;
+      res: out std_logic
     );
   end component;
 
-  signal carry_1, carry_2, carry_3: std_logic;
+  component orGate is
+    port(
+      A: in std_logic;
+      B: in std_logic;
+      res: out std_logic
+    );
+  end component;
 begin
-  MODULE1: FULL_ADDER
-  port map(input_1(0), input_2(0), 0, bcd_output(0), carry_1);
-
-  MODULE2: FULL_ADDER
-    port map(input_1(1), input_2(1), carry_1, bcd_output(1), carry_2);
-
-  MODULE3: FULL_ADDER
-    port map(input_1(2), input_2(2), carry_2, bcd_output(2), carry_3);
-
+  -- Connect everything together :D
 end Structural;
