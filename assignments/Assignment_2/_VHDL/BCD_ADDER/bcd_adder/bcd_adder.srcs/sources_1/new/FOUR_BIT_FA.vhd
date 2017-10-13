@@ -54,14 +54,14 @@ architecture Behavioral of FOUR_BIT_FA is
 
 begin
   MODULE1: FULL_ADDER
-  port map();
+  port map(A(0), B(0), Carry_in, Sum(0), Carry_1);
 
   MODULE2: FULL_ADDER
-  port map();
+  port map(A(1), B(1), Carry_1, Sum(1), Carry_2);
 
   MODULE3: FULL_ADDER
-  port map();
+  port map(A(2), B(2), Carry_2, Sum(2), Carry_3);
 
   MODULE4: FULL_ADDER
-  port map();
+  port map(A(3), B(3), Carry_3, Sum(3), Carry_out);
 end Behavioral ;
