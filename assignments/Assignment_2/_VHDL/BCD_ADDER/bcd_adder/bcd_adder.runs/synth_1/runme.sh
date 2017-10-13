@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log BCD_ADDER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source BCD_ADDER.tcl
+EAStep vivado -log FULL_ADDER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FULL_ADDER.tcl

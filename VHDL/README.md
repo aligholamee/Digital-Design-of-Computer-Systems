@@ -42,3 +42,5 @@ VHDL Types at a glance are defined here:
 * string
 * real -> Operations on the real numbers
 * time -> Delay representation and waveform generation
+![More inforamtion about data types](https://startingelectronics.org/software/VHDL-CPLD-course/tut13-VHDL-data-types-and-operators/)
+![Using custom types in the port declarations](https://stackoverflow.com/questions/16872950/can-custom-types-be-used-in-port-declaration)

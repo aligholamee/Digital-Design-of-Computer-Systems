@@ -2,11 +2,11 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Thu Oct 12 17:46:20 2017
-# Process ID: 5588
+# Start of session at: Fri Oct 13 17:38:19 2017
+# Process ID: 1088
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.runs/synth_1
-# Command line: vivado.exe -log BCD_ADDER.vds -mode batch -messageDb vivado.pb -notrace -source BCD_ADDER.tcl
-# Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.runs/synth_1/BCD_ADDER.vds
+# Command line: vivado.exe -log FULL_ADDER.vds -mode batch -messageDb vivado.pb -notrace -source FULL_ADDER.tcl
+# Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.runs/synth_1/FULL_ADDER.vds
 # Journal file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source BCD_ADDER.tcl -notrace
+source FULL_ADDER.tcl -notrace
