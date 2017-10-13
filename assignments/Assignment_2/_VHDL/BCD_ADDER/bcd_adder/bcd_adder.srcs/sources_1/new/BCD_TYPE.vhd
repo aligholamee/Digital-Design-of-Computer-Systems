@@ -21,5 +21,5 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 package common is
-    type bcd_number is std_logic_vector(2 downto 0);
-end common
+    subtype bcd_number is std_logic_vector(2 downto 0);
+end common;
