@@ -35,11 +35,11 @@ use work.andGate;
 --use UNISIM.VComponents.all;
 entity BCD_ADDER is
     port(
-        input_1: in bcd_number;       -- The input will be a number of 3 digit BCD
-        input_2: in bcd_number;       -- The input will be a number of 3 digit BCD
-        bcd_output: out bcd_number;   -- The output will be a number of 3 digit BCD
-        carry_out: out bcd_number;
-        carry_in: in bcd_number);
+        input_1: in digit;
+        input_2: in digit;
+        bcd_output: out digit;
+        carry_out: out std_logic;
+        carry_in: in std_logic);
 end entity BCD_ADDER;
 
 architecture Structural of BCD_ADDER is
@@ -68,12 +68,12 @@ architecture Structural of BCD_ADDER is
       res: out std_logic
     );
   end component;
+
+  signals
 begin
   -------------------------------------------
-  -- First digit calculator
   MODULE1: FOUR_BIT_FA
-  port map(
-  
+    
   );
 
   MODULE2: andGate
@@ -91,47 +91,5 @@ begin
 
   );
 
-  -------------------------------------------
-  -- Second digit calculator
-  MODULE5: FOUR_BIT_FA
-  port map(
-
-  );
-
-  MODULE6: andGate
-  port map(
-
-  );
-
-  MODULE7: andGate
-  port map(
-
-  );
-
-  MODULE8: orGate
-  port map(
-
-  );
-  -------------------------------------------
-  -- Third digit calculator
-  MODULE9: FOUR_BIT_FA
-  port map(
-
-  );
-
-  MODULE10: andGate
-  port map(
-
-  );
-
-  MODULE11: andGate
-  port map(
-
-  );
-
-  MODULE12: orGate
-  port map(
-
-  );
   -------------------------------------------
 end Structural;
