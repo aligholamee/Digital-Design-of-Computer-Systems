@@ -18,43 +18,46 @@
 --
 ----------------------------------------------------------------------------------
 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity OR_GATE is
   port(
-    A, B: in bit;
-    RES: out bit
+    A, B: in std_logic;
+    RES: out std_logic
   );
 end entity OR_GATE;
 
 entity HALF_ADDER is
   port(
-    A, B: in bit;
-    SUM, CARRY: out bit
+    A, B: in std_logic;
+    SUM, CARRY: out std_logic
   );
 end entity HALF_ADDER;
 
 entity FULL_ADDER is
   port(
-    A, B, CARRY_IN: in bit;
-    SUM, CARRY_OUT: out bit
+    A, B, CARRY_IN: in std_logic;
+    SUM, CARRY_OUT: out std_logic
   );
 end entity FULL_ADDER;
 
 architecture STRUCT of FULL_ADDER is
   component HALF_ADDER
     port(
-      A, B: in bit;
-      SUM, CARRY: out bit
+      A, B: in std_logic;
+      SUM, CARRY: out std_logic
     );
   end component;
 
   component OR_GATE
     port(
-      A, B: in bit;
-      RES: out bit
+      A, B: in std_logic;
+      RES: out std_logic
     );
   end component;
 
-  signal HA1_SUM, HA1_CARRY, HA2_CARRY: bit;
+  signal HA1_SUM, HA1_CARRY, HA2_CARRY: std_logic;
 
 begin
   MODULE_1: HALF_ADDER
