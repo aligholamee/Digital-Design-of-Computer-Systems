@@ -55,7 +55,8 @@ architecture STRUCT of FULL_ADDER is
   end component;
 
   signal HA1_SUM, HA1_CARRY, HA2_CARRY: bit;
-begin:
+
+begin
   MODULE_1: HALF_ADDER
   port map(A, B, HA1_SUM, HA1_CARRY);
 
@@ -63,5 +64,5 @@ begin:
   port map(HA1_SUM, CARRY_IN, SUM, HA2_CARRY);
 
   MODULE_3: OR_GATE
-  port map(HA2_CARRY, HA1_CARRY, CARRY);
+  port map(HA2_CARRY, HA1_CARRY, CARRY_OUT);
 end STRUCT;
