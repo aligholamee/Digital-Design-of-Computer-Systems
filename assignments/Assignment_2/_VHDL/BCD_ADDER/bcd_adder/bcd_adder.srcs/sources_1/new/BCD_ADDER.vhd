@@ -69,5 +69,69 @@ architecture Structural of BCD_ADDER is
     );
   end component;
 begin
-  -- Connect everything together :D
+  -------------------------------------------
+  -- First digit calculator
+  MODULE1: FOUR_BIT_FA
+  port map(
+  
+  );
+
+  MODULE2: andGate
+  port map(
+
+  );
+
+  MODULE3: andGate
+  port map(
+
+  );
+
+  MODULE4: orGate
+  port map(
+
+  );
+
+  -------------------------------------------
+  -- Second digit calculator
+  MODULE5: FOUR_BIT_FA
+  port map(
+
+  );
+
+  MODULE6: andGate
+  port map(
+
+  );
+
+  MODULE7: andGate
+  port map(
+
+  );
+
+  MODULE8: orGate
+  port map(
+
+  );
+  -------------------------------------------
+  -- Third digit calculator
+  MODULE9: FOUR_BIT_FA
+  port map(
+
+  );
+
+  MODULE10: andGate
+  port map(
+
+  );
+
+  MODULE11: andGate
+  port map(
+
+  );
+
+  MODULE12: orGate
+  port map(
+
+  );
+  -------------------------------------------
 end Structural;
