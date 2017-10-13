@@ -70,7 +70,11 @@ architecture Structural of BCD_ADDER is
     );
   end component;
 
-  signals
+  signal c1: digit;
+  signal c2: digit;
+  signal c3: digit;
+  signal c4: std_logic;
+  
 begin
   -------------------------------------------
   MODULE1: FOUR_BIT_FA
