@@ -35,7 +35,10 @@ use work.common.all;
 entity BCD_ADDER is
     port(
         input_1: in bcd_number;
-        input_2: in bcd_number);
+        input_2: in bcd_number;
+        output: out bcd_number;
+        carry_out: out bcd_number;
+        carry_in: in bcd_number);
 end entity BCD_ADDER;
 
 architecture Structural of BCD_ADDER is
