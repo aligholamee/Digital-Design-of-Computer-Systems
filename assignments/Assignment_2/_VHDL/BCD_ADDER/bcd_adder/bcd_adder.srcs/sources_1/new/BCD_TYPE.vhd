@@ -20,6 +20,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-package common is
-    subtype bcd_number is std_logic_vector(2 downto 0);
-end common;
+package Common is    -- untested...
+
+   type digit is array (3 downto 0) of std_logic;
+   type bcd_number is array (2 downto 0) of digit;
+end Common;
