@@ -53,12 +53,12 @@ architecture Structural of BCD_ADDER is
   signal carry_1, carry_2, carry_3: std_logic;
 begin
   MODULE1: FULL_ADDER
-  port map(input_1[0], input_2[0], 0, bcd_output[0], carry_1);
+  port map(input_1(0), input_2(0), 0, bcd_output(0), carry_1);
 
   MODULE2: FULL_ADDER
-    port map(input_1[1], input_2[1], carry_1, bcd_output[1], carry_2);
+    port map(input_1(1), input_2(1), carry_1, bcd_output(1), carry_2);
 
   MODULE3: FULL_ADDER
-    port map(input_1[2], input_2[2], carry_2, bcd_output[2], carry_3);
+    port map(input_1(2), input_2(2), carry_2, bcd_output(2), carry_3);
 
 end Structural;
