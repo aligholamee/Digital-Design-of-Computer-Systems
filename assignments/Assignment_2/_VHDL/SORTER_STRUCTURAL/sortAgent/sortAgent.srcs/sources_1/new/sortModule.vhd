@@ -41,6 +41,29 @@ end sortModule;
 
 architecture Behavioral of sortModule is
 begin
+  process
+  begin
+    A: for I in 0 to n-1 generate
+    begin
+      B: for J in 1 to n generate
+      begin
+        if(inputArray(J) <= inputArray(J-1))
+          --swap
+        else
+          -- nothing
+      end generate;
+      C: for C in 1 to n-1 generate
+      begin
+        if(inputArray(C+1) <= inputArray(C))
+          --swap
+        else
+          -- nothing
+      end generate;
+    end generate;
+  end process;
+end architecture Behavioral;
+
+
 
 
 end Behavioral;
