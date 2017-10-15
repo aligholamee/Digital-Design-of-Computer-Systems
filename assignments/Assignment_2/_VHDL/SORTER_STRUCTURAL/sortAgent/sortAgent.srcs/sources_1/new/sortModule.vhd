@@ -42,6 +42,7 @@ end sortModule;
 
 architecture Behavioral of sortModule is
     signal temp: std_logic;
+    signal clk, reset: std_logic;
 begin
   process(clk, reset)
   begin
