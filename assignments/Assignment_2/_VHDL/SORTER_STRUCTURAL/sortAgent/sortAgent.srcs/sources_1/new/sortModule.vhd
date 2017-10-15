@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity sortModule is
-  generic (N: integer := 8)
+  generic (N: integer := 8);
   port (
     inputArray: in std_logic_vector(0 to N-1);
     outputArray: out std_logic_vector(0 to N-1)
@@ -42,7 +42,7 @@ end sortModule;
 architecture Behavioral of sortModule is
 begin
   process
-  var temp: std_logic;
+  variable var temp: std_logic;
   begin
     A: for I in 0 to n-1 generate
     begin
