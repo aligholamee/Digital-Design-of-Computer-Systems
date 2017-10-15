@@ -46,19 +46,16 @@ begin
   begin
     A: for I in 0 to n-1 loop
       B: for J in 1 to n loop
-        if((unsigned)inputArray(J) <= (unsigned)inputArray(J-1))
-          then
-            temp := inputArray(J-1);
+        if((unsigned)inputArray(J) <= (unsigned)inputArray(J-1)) then
             inputArray(J-1) <= inputArray(J);
-            inputArray(J) <= temp;
+            inputArray(J) <= inputArray(J-1);
           end if;
       end loop;
       C: for C in 1 to n-1 loop
         if((unsigned)inputArray(C+1) <= (unsigned)inputArray(C))
           then
-            temp := inputArray(C);
             inputArray(C) <= inputArray(C+1);
-            inputArray(C+1) <= temp;
+            inputArray(C+1) <= inputArray(C);
         end if;
       end loop;
     end loop;
