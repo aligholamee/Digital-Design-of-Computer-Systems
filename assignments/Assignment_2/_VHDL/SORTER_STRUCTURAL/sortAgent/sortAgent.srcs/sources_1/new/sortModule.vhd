@@ -47,13 +47,13 @@ begin
   begin
     A: for I in 0 to n-1 loop
       B: for J in 1 to n loop
-        if(unsigned(inputArray(J)) <= unsigned(inputArray(J-1))) then
+        if(inputArray(J) <= inputArray(J-1)) then
             inputArray(J-1) <= inputArray(J);
             inputArray(J) <= inputArray(J-1);
           end if;
       end loop;
       C: for C in 1 to n-1 loop
-        if(unsigned(inputArray(C+1)) <= unsigned(inputArray(C)))
+        if(inputArray(C+1) <= inputArray(C))
           then
             inputArray(C) <= inputArray(C+1);
             inputArray(C+1) <= inputArray(C);
