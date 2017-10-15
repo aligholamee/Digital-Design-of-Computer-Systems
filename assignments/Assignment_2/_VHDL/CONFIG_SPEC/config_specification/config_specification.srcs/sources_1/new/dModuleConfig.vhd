@@ -3,19 +3,19 @@
 -- Engineer: Ali Gholami (aligholamee)
 --
 -- Create Date: 10/13/2017 06:55:59 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: dModuleConfig - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
