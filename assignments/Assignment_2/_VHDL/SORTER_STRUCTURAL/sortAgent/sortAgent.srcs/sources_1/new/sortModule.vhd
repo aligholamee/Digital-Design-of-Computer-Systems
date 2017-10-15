@@ -42,22 +42,27 @@ end sortModule;
 architecture Behavioral of sortModule is
 begin
   process
+  var temp: std_logic;
   begin
     A: for I in 0 to n-1 generate
     begin
       B: for J in 1 to n generate
       begin
         if(inputArray(J) <= inputArray(J-1))
-          --swap
-        else
-          -- nothing
+          begin
+            temp <= tempArray(J-1);
+            tempArray(J-1) <= tempArray(J);
+            tempArray(J) <= temp;
+          end if;
       end generate;
       C: for C in 1 to n-1 generate
       begin
         if(inputArray(C+1) <= inputArray(C))
-          --swap
-        else
-          -- nothing
+          begin
+            temp <= tempArray(C);
+            tempArray(C) <= tempArray(C+1);
+            tempArray(C+1) <= temp;
+        end if;
       end generate;
     end generate;
   end process;
