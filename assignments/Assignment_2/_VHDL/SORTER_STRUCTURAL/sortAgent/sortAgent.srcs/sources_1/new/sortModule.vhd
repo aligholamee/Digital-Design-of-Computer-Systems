@@ -35,8 +35,8 @@
     entity sortModule is
       generic (N: integer := 8);
       port (
-        inputArray: in std_logic_vector(0 to N-1);
-        outputArray: out std_logic_vector(0 to N-1)
+        inputArray: inout std_logic_vector(0 to N-1);
+        outputArray: inout std_logic_vector(0 to N-1)
       );
     end sortModule;
 
@@ -46,13 +46,13 @@
       variable temp: std_logic;
       begin
         A: for I in 0 to n-1 loop
-          B: for J in 1 to n loop
+          B: for J in 1 to n-1 loop
             if(inputArray(J) <= inputArray(J-1)) then
                 inputArray(J-1) <= inputArray(J);
                 inputArray(J) <= inputArray(J-1);
               end if;
           end loop;
-          C: for C in 1 to n-1 loop
+          C: for C in 1 to n-2 loop
             if(inputArray(C+1) <= inputArray(C))
               then
                 inputArray(C) <= inputArray(C+1);
