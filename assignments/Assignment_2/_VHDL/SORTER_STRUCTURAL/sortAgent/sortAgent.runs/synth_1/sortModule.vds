@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sun Oct 15 17:00:00 2017
-# Process ID: 11428
+# Start of session at: Sun Oct 15 17:27:30 2017
+# Process ID: 4100
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.runs/synth_1
 # Command line: vivado.exe -log sortModule.vds -mode batch -messageDb vivado.pb -notrace -source sortModule.tcl
 # Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.runs/synth_1/sortModule.vds
@@ -15,30 +15,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 306.414 ; gain = 134.801
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 306.145 ; gain = 134.844
 ---------------------------------------------------------------------------------
-ERROR: [Synth 8-2715] syntax error near temp [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:45]
-ERROR: [Synth 8-2715] syntax error near generate [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:47]
-ERROR: [Synth 8-2715] syntax error near generate [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:49]
-ERROR: [Synth 8-2715] syntax error near begin [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:52]
-ERROR: [Synth 8-1031] temp is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:53]
-ERROR: [Synth 8-1031] temparray is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:54]
-ERROR: [Synth 8-1031] temparray is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:55]
-ERROR: [Synth 8-2715] syntax error near if [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:56]
-ERROR: [Synth 8-2715] syntax error near generate [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:58]
-ERROR: [Synth 8-2715] syntax error near begin [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:61]
-ERROR: [Synth 8-1031] temp is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:62]
-ERROR: [Synth 8-1031] temparray is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:63]
-ERROR: [Synth 8-1031] temparray is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:64]
-ERROR: [Synth 8-2715] syntax error near if [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:65]
-WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:44]
-INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:42]
+ERROR: [Synth 8-1789] cannot update 'in' object inputarray [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:51]
+ERROR: [Synth 8-1789] cannot update 'in' object inputarray [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:52]
+ERROR: [Synth 8-1789] cannot update 'in' object inputarray [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:58]
+ERROR: [Synth 8-1789] cannot update 'in' object inputarray [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:59]
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:45]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/SORTER_STRUCTURAL/sortAgent/sortAgent.srcs/sources_1/new/sortModule.vhd:43]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.543 ; gain = 161.930
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.328 ; gain = 162.027
 ---------------------------------------------------------------------------------
 synthesize failed
 INFO: [Common 17-83] Releasing license: Synthesis
-3 Infos, 1 Warnings, 0 Critical Warnings and 15 Errors encountered.
+3 Infos, 1 Warnings, 0 Critical Warnings and 5 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 15 17:00:06 2017...
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 15 17:27:37 2017...
