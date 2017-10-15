@@ -67,8 +67,3 @@ begin
     end generate;
   end process;
 end architecture Behavioral;
-
-
-
-
-end Behavioral;
