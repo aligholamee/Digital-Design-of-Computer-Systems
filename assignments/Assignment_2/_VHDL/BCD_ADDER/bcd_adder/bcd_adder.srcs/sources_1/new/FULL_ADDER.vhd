@@ -20,26 +20,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.HALF_ADDER;
+use work.orGate;
 
-entity OR_GATE is
-  port(
-    A, B: in std_logic;
-    RES: out std_logic
-  );
-end entity OR_GATE;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity HALF_ADDER is
-  port(
-    A, B: in std_logic;
-    SUM, CARRY: out std_logic
-  );
-end entity HALF_ADDER;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
 
 entity FULL_ADDER is
   port(
