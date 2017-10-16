@@ -33,8 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity HALF_ADDER is
   port(
-    A, B: in bit;
-    SUM, CARRY: out bit);
+    A, B: in std_logic;
+    SUM, CARRY: out std_logic);
 end entity HALF_ADDER;
 
 architecture RTL of HALF_ADDER is
