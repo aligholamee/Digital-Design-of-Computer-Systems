@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami (aligholamee)
+--
 -- Create Date: 10/16/2017 12:10:19 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: halfAdder - RTL
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -42,4 +42,3 @@ begin
   SUM <= A xor B;
   CARRY <= A and B;
 end architecture RTL;
-
