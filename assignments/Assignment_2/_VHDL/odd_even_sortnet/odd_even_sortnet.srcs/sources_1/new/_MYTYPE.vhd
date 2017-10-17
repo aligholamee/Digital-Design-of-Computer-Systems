@@ -32,5 +32,4 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 package Common is    -- untested...
 
-  type my_type is array(natural range <>) of bit_vector(7 downto 0);
 end Common;
