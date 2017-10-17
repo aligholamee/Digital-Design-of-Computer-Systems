@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/BCD_TYPE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/ThreeDigitBCDAdder.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'bcd_adder' is not compiled in library work [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/ThreeDigitBCDAdder.vhd:25]
+INFO: [VRFC 10-307] analyzing entity threeDigitBcdAdder
+ERROR: [VRFC 10-1504] unit threedigitbcdadder ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/ThreeDigitBCDAdder.vhd:36]
+INFO: [VRFC 10-240] VHDL file C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/ThreeDigitBCDAdder.vhd ignored due to errors

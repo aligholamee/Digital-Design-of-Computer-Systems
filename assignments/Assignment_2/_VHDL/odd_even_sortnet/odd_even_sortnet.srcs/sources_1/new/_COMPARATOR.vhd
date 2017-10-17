@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami (aligholamee)
 --
 -- Create Date: 10/17/2017 01:36:58 PM
 -- Design Name:
@@ -32,16 +32,16 @@ use work.common.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity _COMPARATOR is
+entity comparator is
     port(
-        input1: in my_type;
-        input2: in my_type;
-        output1: out my_type;
-        output2: out my_type
+        input1: in bit_vector(7 downto 0);
+        input2: in bit_vector(7 downto 0);
+        output1: out bit_vector(7 downto 0);
+        output2: out bit_vector(7 downto 0)
     );
-end _COMPARATOR;
+end comparator;
 
-architecture Behavioral of _COMPARATOR is
+architecture Behavioral of comparator is
 begin
     output1 <= input1 when input1 > input2 else input2;
     output2 <= input1 when input1 < input2 else input2;

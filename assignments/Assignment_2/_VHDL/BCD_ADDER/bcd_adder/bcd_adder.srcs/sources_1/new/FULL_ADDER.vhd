@@ -23,7 +23,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.HALF_ADDER;
 use work.orGate;
 
-
 entity FULL_ADDER is
   port(
     A, B, CARRY_IN: in std_logic;

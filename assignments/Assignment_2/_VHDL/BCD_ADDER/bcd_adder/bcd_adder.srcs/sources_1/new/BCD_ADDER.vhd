@@ -24,6 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.common.all;
 use work.orGate;
 use work.andGate;
+use work.HALF_ADDER;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values

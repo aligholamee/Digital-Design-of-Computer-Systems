@@ -63,16 +63,13 @@ begin
                     if(j = 1) generate
                         first_coms_odd: comparator port map(outputSignal(i-2)(j-1), outputSignal(i-1)(j), outputSignal(i)(j-1), outputSignal(i)(j));
                     end generate;
-                end generate;
-
-                elsif(j mod 2 = 1) generate -- Handles the last comp of odd columns
                     if(j = 7) generate
                         last_coms_odd: comparator port map(outputSignal(i-1)(j-1), outputSignal(i-2)(j), outputSignal(i)(j-1), outputSignal(i)(j));
                     end generate;
                 end generate;
 
                 else generate   -- Handles the other comps of odd columns
-                coms_odd: comparator port map(outputSignal(j-1)(), inputSignal(j)(), outputSignal(i)(j-1), outputSignal()());
+                coms_odd: comparator port map(outputSignal(i-1)(j-1), inputSignal(i-1)(j), outputSignal(i)(j-1), outputSignal(i)(j));
                 end generate;
 
         if(i mod 2 = 1) generate

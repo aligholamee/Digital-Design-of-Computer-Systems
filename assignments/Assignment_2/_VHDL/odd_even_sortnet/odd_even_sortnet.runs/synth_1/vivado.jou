@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue Oct 17 14:21:06 2017
+# Process ID: 1944
+# Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/odd_even_sortnet/odd_even_sortnet.runs/synth_1
+# Command line: vivado.exe -log comparator.vds -mode batch -messageDb vivado.pb -notrace -source comparator.tcl
+# Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/odd_even_sortnet/odd_even_sortnet.runs/synth_1/comparator.vds
+# Journal file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/odd_even_sortnet/odd_even_sortnet.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source comparator.tcl -notrace

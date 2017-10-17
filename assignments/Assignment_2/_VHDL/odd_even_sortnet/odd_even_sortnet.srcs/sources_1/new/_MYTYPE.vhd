@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami (aligholamee)
 --
 -- Create Date: 10/17/2017 01:50:45 PM
 -- Design Name:

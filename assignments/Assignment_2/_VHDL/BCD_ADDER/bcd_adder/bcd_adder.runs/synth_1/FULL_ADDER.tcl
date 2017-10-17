@@ -13,7 +13,11 @@ set_property parent.project_path {C:/Users/Ali Gholami/Desktop/onGoing/Digital D
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-read_vhdl -library xil_defaultlib {{C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/FULL_ADDER.vhd}}
+read_vhdl -library xil_defaultlib {
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/halfAdder.vhd}
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/orGate.vhd}
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_2/_VHDL/BCD_ADDER/bcd_adder/bcd_adder.srcs/sources_1/new/FULL_ADDER.vhd}
+}
 synth_design -top FULL_ADDER -part xc7vx485tffg1157-1
 write_checkpoint -noxdef FULL_ADDER.dcp
 catch { report_utilization -file FULL_ADDER_utilization_synth.rpt -pb FULL_ADDER_utilization_synth.pb }
