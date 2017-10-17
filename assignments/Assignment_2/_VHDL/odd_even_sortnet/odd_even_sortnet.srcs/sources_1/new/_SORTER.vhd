@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami (aligholamee)
+--
 -- Create Date: 10/17/2017 06:16:41 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: sorter - Structural
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -51,16 +51,30 @@ begin
             first_col: comparator port map(inputSignal(x-1), inputSignal(x), outputSignal(0)(x-1), outputSignal(0)(x));
     end generate;
     -- for the last column
-    
-    
+
+
     -- for internal columns
     for i in 1 to 6 generate
     begin
         if(i mod 2 = 0) generate
             L1: for j in 0 to N-1 generate
             -- Assign N/2 Comparators
-                if(j mod 2 = 1) -- odd number of wires means one comparator!
+                if(j mod 2 = 1) generate -- Handles the first comp of odd columns
+                    if(j = 1) generate
+                        first_coms_odd: comparator port map(outputSignal(i-2)(j-1), outputSignal(i-1)(j), outputSignal(i)(j-1), outputSignal(i)(j));
+                    end generate;
+                end generate;
+
+                elsif(j mod 2 = 1) generate -- Handles the last comp of odd columns
+                    if(j = 7) generate
+                        last_coms_odd: comparator port map(outputSignal(i-1)(j-1), outputSignal(i-2)(j), outputSignal(i)(j-1), outputSignal(i)(j));
+                    end generate;
+                end generate;
+
+                else generate   -- Handles the other comps of odd columns
                 coms_odd: comparator port map(outputSignal(j-1)(), inputSignal(j)(), outputSignal(i)(j-1), outputSignal()());
+                end generate;
+
         if(i mod 2 = 1) generate
             L2: for j in 1 to N-2 generate
             -- Assign N/2 - 1 Comparators
@@ -69,5 +83,5 @@ begin
             end generate;
         end generate;
     end generate;
-        
+
 end Structural;
