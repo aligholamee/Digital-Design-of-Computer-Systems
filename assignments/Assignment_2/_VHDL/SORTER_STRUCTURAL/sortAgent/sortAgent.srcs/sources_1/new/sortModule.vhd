@@ -36,7 +36,8 @@ entity sortModule is
   generic (N: integer := 8);
   port (
     inputArray: buffer bit_vector(0 to N-1);
-    outputArray: out bit_vector(0 to N-1)
+    outputArray: out bit_vector(0 to N-1);
+    clk: inout std_logic
   );
 end sortModule;
 
@@ -45,35 +46,37 @@ architecture Behavioral of sortModule is
     signal temp2: bit;
     
 begin
-    process
+    process(clk)
         variable I: integer;
         variable J: integer;
-        variable C: integer;
-        begin            
-            I := 0;
-            J := 1;
-            C := 1;
-            A: while I < n-1 loop
-                B: while J < n-1 loop
-                    if(inputArray(J) <= inputArray(J-1)) then
-                        temp2 <= inputArray(J-1);
-                        temp <= inputArray(J);
-                        inputArray(J) <= temp2;
-                        inputArray(J-1) <= temp;
-                    end if;
-                    J := J + 1;
-                   end loop B;
-                X: while C < n-2 loop
-                    if(inputArray(C+1) <= inputArray(C)) then
-                        temp2 <= inputArray(C+1);
-                        temp <= inputArray(C);
-                        inputArray(C) <= temp2;
-                        inputArray(C+1) <= temp;
-                    end if;
-                    C := C + 1;
-                   end loop X;
-                I := I + 1;
-           end loop A;
+        variable C: integer;  
+        begin
+        if(rising_edge(clk)) then
+                I := 0;
+                J := 1;
+                C := 1;
+                A: while I < n-1 loop
+                    B: while J < n-1 loop
+                        if(inputArray(J) <= inputArray(J-1)) then
+                            temp2 <= inputArray(J-1);
+                            temp <= inputArray(J);
+                            inputArray(J) <= temp2;
+                            inputArray(J-1) <= temp;
+                        end if;
+                        J := J + 1;
+                       end loop B;
+                    X: while C < n-2 loop
+                        if(inputArray(C+1) <= inputArray(C)) then
+                            temp2 <= inputArray(C+1);
+                            temp <= inputArray(C);
+                            inputArray(C) <= temp2;
+                            inputArray(C+1) <= temp;
+                        end if;
+                        C := C + 1;
+                       end loop X;
+                    I := I + 1;
+               end loop A;
+               outputArray <= inputArray;
+            end if;
         end process;
-    outputArray <= inputArray;
 end architecture Behavioral;   
