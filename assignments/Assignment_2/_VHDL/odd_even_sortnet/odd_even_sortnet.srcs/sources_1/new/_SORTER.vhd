@@ -47,12 +47,14 @@ architecture Structural of sorter is
 begin
     -- for the first column
     for x in 0 to N-1 generate
-        if(x mod 2 = 1)
+        if(x mod 2 = 1) generate
             first_col: comparator port map(inputSignal(x-1), inputSignal(x), outputSignal(0)(x-1), outputSignal(0)(x));
+        end generate;
     end generate;
     -- for the last column
-
-
+    for y in 1 to N-2 generate
+        if (y mod 2 = 1) generate 
+            last_col: comparator port map(outputSignal(6)(y), outputSignal(6)(y+1), outputSignal(7)(y), outputSignal(7)(y+1));
     -- for internal columns
     for i in 1 to 6 generate
     begin
