@@ -31,7 +31,5 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 package Common is    -- untested...
-
-   type digit is array (3 downto 0) of std_logic;
-   type bcd_number is array (2 downto 0) of digit;
+  type my_type is array of std_ulogic_vector(7 downto 0);
 end Common;
