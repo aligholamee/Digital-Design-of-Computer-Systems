@@ -35,38 +35,45 @@ use ieee.numeric_std.all;
 entity sortModule is
   generic (N: integer := 8);
   port (
-    inputArray: inout std_logic_vector(0 to N-1);
-    outputArray: inout std_logic_vector(0 to N-1)
+    inputArray: buffer bit_vector(0 to N-1);
+    outputArray: out bit_vector(0 to N-1)
   );
 end sortModule;
 
 architecture Behavioral of sortModule is
-    signal temp: std_logic;
-    signal clk, reset: std_logic;
+    signal temp: bit;
+    signal temp2: bit;
+    
 begin
-  process(clk, reset)
-  begin
-    if reset = "0" then
-      if clk'event and clk = "1" then
-        A: for I in 0 to n-1 loop
-          B: for J in 1 to n-1 loop
-            if(inputArray(J) <= inputArray(J-1)) then
-                temp <= inputArray(J);
-                inputArray(J) <= inputArray(J-1);
-                inputArray(J-1) <= temp;
-              end if;
-          end loop;
-          C: for C in 1 to n-2 loop
-            if(inputArray(C+1) <= inputArray(C))
-              then
-                temp <= inputArray(C);
-                inputArray(C) <= inputArray(C+1);
-                inputArray(C+1) <= temp;
-            end if;
-          end loop;
-        end loop;
-      end if;
-    end if;
-  end process;
-  outputArray <= inputArray;
-end architecture Behavioral;
+    process
+        variable I: integer;
+        variable J: integer;
+        variable C: integer;
+        begin            
+            I := 0;
+            J := 1;
+            C := 1;
+            A: while I < n-1 loop
+                B: while J < n-1 loop
+                    if(inputArray(J) <= inputArray(J-1)) then
+                        temp2 <= inputArray(J-1);
+                        temp <= inputArray(J);
+                        inputArray(J) <= temp2;
+                        inputArray(J-1) <= temp;
+                    end if;
+                    J := J + 1;
+                   end loop B;
+                X: while C < n-2 loop
+                    if(inputArray(C+1) <= inputArray(C)) then
+                        temp2 <= inputArray(C+1);
+                        temp <= inputArray(C);
+                        inputArray(C) <= temp2;
+                        inputArray(C+1) <= temp;
+                    end if;
+                    C := C + 1;
+                   end loop X;
+                I := I + 1;
+           end loop A;
+        end process;
+    outputArray <= inputArray;
+end architecture Behavioral;   
