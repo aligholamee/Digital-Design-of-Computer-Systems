@@ -37,8 +37,37 @@ entity sorter is
 end sorter;
 
 architecture Structural of sorter is
-
+    component comparator is
+        port(
+            input1: in bit_vector(7 downto 0);
+            input2: in bit_vector(7 downto 0);
+            output1: out bit_vector(7 downto 0);
+            output2: out bit_vector(7 downto 0)
+        );
 begin
-
-
+    -- for the first column
+    for x in 0 to N-1 generate
+        if(x mod 2 = 1)
+            first_col: comparator port map(inputSignal(x-1), inputSignal(x), outputSignal(0)(x-1), outputSignal(0)(x));
+    end generate;
+    -- for the last column
+    
+    
+    -- for internal columns
+    for i in 1 to 6 generate
+    begin
+        if(i mod 2 = 0) generate
+            L1: for j in 0 to N-1 generate
+            -- Assign N/2 Comparators
+                if(j mod 2 = 1) -- odd number of wires means one comparator!
+                coms_odd: comparator port map(outputSignal(j-1)(), inputSignal(j)(), outputSignal(i)(j-1), outputSignal()());
+        if(i mod 2 = 1) generate
+            L2: for j in 1 to N-2 generate
+            -- Assign N/2 - 1 Comparators
+                if(j mod 2 = 1) -- odd number of wires means one comparator!
+                coms_even: comparator port map(outputSignal(i-1)(j), inputSignal(i-1)(j+1), outputSignal(i)(j-1), outputSignal(i)(j));
+            end generate;
+        end generate;
+    end generate;
+        
 end Structural;
