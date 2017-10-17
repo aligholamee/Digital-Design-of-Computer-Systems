@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.common.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,7 +34,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity sorter is
     generic(N: integer := 8);
-    -- algo found!
+    port(
+        input: in myType(N-1 downto 0);
+        output: out myType(N-1 downto 0);
+        clk: input std_logic
+    );
+
 end sorter;
 
 architecture Structural of sorter is
@@ -44,6 +50,10 @@ architecture Structural of sorter is
             output1: out bit_vector(7 downto 0);
             output2: out bit_vector(7 downto 0)
         );
+     end component comparator;
+
+     -- 2D array of signals
+     signal SIG_ARR: myType(N-1 downto 0);
 begin
     -- for the first column
     for x in 0 to N-1 generate
@@ -53,7 +63,7 @@ begin
     end generate;
     -- for the last column
     for y in 1 to N-2 generate
-        if (y mod 2 = 1) generate 
+        if (y mod 2 = 1) generate
             last_col: comparator port map(outputSignal(6)(y), outputSignal(6)(y+1), outputSignal(7)(y), outputSignal(7)(y+1));
     -- for internal columns
     for i in 1 to 6 generate
