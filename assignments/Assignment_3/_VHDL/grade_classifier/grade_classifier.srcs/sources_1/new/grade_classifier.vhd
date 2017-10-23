@@ -27,9 +27,9 @@ use work.common.all;
 
 entity GradeClassifier is
     port(
-        gradeInput: gradeType;
-        a, b, c, d: bit;
-    )
+        gradeInput: in gradeType;
+        a, b, c, d: out bit
+    );
 end GradeClassifier;
 
 architecture Behavioral of GradeClassifier is
