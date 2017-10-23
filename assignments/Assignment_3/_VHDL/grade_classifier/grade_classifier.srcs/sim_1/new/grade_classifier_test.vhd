@@ -28,10 +28,10 @@ entity GCTestBench is
 end GCTestBench;
 
 architecture Gate of GCTestBench is
-    component GradeClassifier is (
+    component GradeClassifier is port(
         gradeInput: in gradeType;
         a, b, c, d: out bit
-    )
+    );
     end component GradeClassifier;
 
     signal OutputVector: bit_vector(3 downto 0);
@@ -56,4 +56,5 @@ begin
             wait for 100 ns;
             GradeInput <= 95;
             wait;
+        end process;
 end Gate;

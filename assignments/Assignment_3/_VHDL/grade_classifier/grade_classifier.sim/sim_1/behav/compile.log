@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sources_1/new/grade_type.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sources_1/new/grade_classifier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity GradeClassifier
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sim_1/new/grade_classifier_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity GCTestBench
