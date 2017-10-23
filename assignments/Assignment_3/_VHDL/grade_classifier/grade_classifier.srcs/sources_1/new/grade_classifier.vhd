@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Amirkabir University of Technology
+-- Engineer: Ali Gholami(aligholamee)
 -- 
 -- Create Date: 10/23/2017 08:36:00 PM
 -- Design Name: 
@@ -16,23 +16,19 @@
 -- Revision 0.01 - File Created
 -- Additional Comments:
 -- 
+-- The purpose of this excercise is to understand the 
+-- conventions in using the VHDL conditional concurrent assignments :)
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use work.Common.all;
 
 entity GradeClassifier is
---  Port ( );
+    port(
+        gradeInput: 
+    )
 end GradeClassifier;
 
 architecture Behavioral of GradeClassifier is
