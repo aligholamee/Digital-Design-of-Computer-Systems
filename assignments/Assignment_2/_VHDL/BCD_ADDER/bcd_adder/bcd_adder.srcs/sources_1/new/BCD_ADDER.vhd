@@ -25,6 +25,7 @@ use work.common.all;
 use work.orGate;
 use work.andGate;
 use work.HALF_ADDER;
+use work.BCD_TYPE;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -75,7 +76,7 @@ architecture Structural of BCD_ADDER is
   signal c2: digit;
   signal c3: digit;
   signal c4: std_logic;
-  
+
 begin
   -------------------------------------------
   MODULE1: FOUR_BIT_FA
