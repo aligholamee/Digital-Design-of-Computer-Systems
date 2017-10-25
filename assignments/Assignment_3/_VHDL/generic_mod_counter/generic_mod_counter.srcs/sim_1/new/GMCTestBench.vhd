@@ -42,17 +42,18 @@ architecture Behavioral of GMCTestBench is
   signal RST: std_logic;
 begin
   MC1: GenericModCounter port map(
-    modInput => ModInput;
-    counterOutput => CounterOutput;
-    asyncReset => RST;
+    modInput => ModInput,
+    counterOutput => CounterOutput,
+    asyncReset => RST,
     clk => CLK
   );
-  process
+  process(clk)
     begin
       ModInput <= 5;
       wait for 500 ns;
       ModInput <= 6;
       wait for 500 ns;
       ModInput <= 7;
-      wait for 500 ns; 
+      wait for 500 ns;
+  end process; 
 end Behavioral;
