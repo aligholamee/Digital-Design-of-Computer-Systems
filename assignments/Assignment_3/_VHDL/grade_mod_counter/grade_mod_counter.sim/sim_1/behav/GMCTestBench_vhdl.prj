@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../grade_mod_counter.srcs/sources_1/new/mod_counter.vhd"
+vhdl xil_defaultlib  "../../../grade_mod_counter.srcs/sim_1/new/mod_counter_tb.vhd"
+
+# Do not sort compile order
+nosort

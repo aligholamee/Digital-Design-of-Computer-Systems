@@ -1,0 +1,1 @@
+-wto "9ad40c901bb243cb828624d99d8933cc" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "GMCTestBench_behav" "xil_defaultlib.GMCTestBench" -log "elaborate.log" 

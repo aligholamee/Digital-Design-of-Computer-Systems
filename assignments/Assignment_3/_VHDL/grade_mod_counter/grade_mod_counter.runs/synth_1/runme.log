@@ -1,0 +1,235 @@
+
+*** Running vivado
+    with args -log GenericModCounter.vds -m64 -mode batch -messageDb vivado.pb -notrace -source GenericModCounter.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source GenericModCounter.tcl -notrace
+Command: synth_design -top GenericModCounter -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 306.090 ; gain = 134.344
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'GenericModCounter' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_mod_counter/grade_mod_counter.srcs/sources_1/new/mod_counter.vhd:35]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GenericModCounter' (1#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_mod_counter/grade_mod_counter.srcs/sources_1/new/mod_counter.vhd:35]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.340 ; gain = 161.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.340 ; gain = 161.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.340 ; gain = 161.594
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+WARNING: [Synth 8-327] inferring latch for variable 'asyncReset_reg' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_mod_counter/grade_mod_counter.srcs/sources_1/new/mod_counter.vhd:40]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 338.613 ; gain = 166.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (asyncReset_reg)
+WARNING: [Synth 8-3332] Sequential element (asyncReset_reg) is unused and will be removed from module GenericModCounter.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 601.352 ; gain = 429.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 614.438 ; gain = 442.691
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT2   |    32|
+|4     |FDRE   |    32|
+|5     |IBUF   |    33|
+|6     |OBUF   |    33|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   139|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 614.438 ; gain = 344.566
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 614.438 ; gain = 442.691
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 679.402 ; gain = 481.082
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 679.402 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 23:53:49 2017...
