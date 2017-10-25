@@ -28,13 +28,25 @@ entity GenericModCounter is
     port (
         modInput: integer:= N;
         counterOutput: integer;
-        asyncReset: std_logic
+        asyncReset: std_logic;
+        clk: std_logic
     );
 end GenericModCounter;
 
 architecture RTL of GenericModCounter is
 
 begin
+    process(clk, asyncReset)
+    begin
+        if(asyncReset = 0) then
+            modInput := N;
+            counterOutput := 0;
+            asyncReset := 1;
 
-
+        elsif clk'event and clk = 1 then
+            counterOutput := counterOutput + modInput;
+        else 
+            -- Do nothing;
+        end if;
+    end process;
 end RTL;
