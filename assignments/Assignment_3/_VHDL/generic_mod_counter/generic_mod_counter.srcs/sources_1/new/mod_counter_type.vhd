@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 10/23/2017 08:56:58 PM
+-- Create Date: 10/25/2017 12:51:45 PM
 -- Design Name: 
 -- Module Name:  - 
 -- Project Name: 
@@ -21,8 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
 package Common is 
-   type gradeType is range 2 to 7;
+    type modType is range 2 to 7;
 end Common;

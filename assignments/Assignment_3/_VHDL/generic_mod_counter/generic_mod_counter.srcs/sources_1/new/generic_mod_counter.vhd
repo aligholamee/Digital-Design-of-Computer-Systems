@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 10/23/2017 08:56:58 PM
+-- Create Date: 10/25/2017 12:50:27 PM
 -- Design Name: 
--- Module Name:  - 
+-- Module Name: GenericModCounter - RTL
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,8 +21,20 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+use work.common.all;
 
-package Common is 
-   type gradeType is range 2 to 7;
-end Common;
+entity GenericModCounter is
+    generic N(integer := 4);
+    port (
+        modInput: integer:= N;
+        counterOutput: integer;
+        asyncReset: std_logic
+    );
+end GenericModCounter;
+
+architecture RTL of GenericModCounter is
+
+begin
+
+
+end RTL;
