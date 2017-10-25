@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Mon Oct 23 23:46:24 2017
+| Date         : Mon Oct 23 23:59:15 2017
 | Host         : DESKTOP-TJ9Q1DD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file GradeClassifier_utilization_synth.rpt -pb GradeClassifier_utilization_synth.pb
 | Design       : GradeClassifier
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    7 |     0 |    303600 | <0.01 |
-|   LUT as Logic          |    7 |     0 |    303600 | <0.01 |
+| Slice LUTs*             |  114 |     0 |    303600 |  0.04 |
+|   LUT as Logic          |  114 |     0 |    303600 |  0.04 |
 |   LUT as Memory         |    0 |     0 |    130800 |  0.00 |
 | Slice Registers         |    0 |     0 |    607200 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    607200 |  0.00 |
 |   Register as Latch     |    0 |     0 |    607200 |  0.00 |
-| F7 Muxes                |    1 |     0 |    151800 | <0.01 |
+| F7 Muxes                |    0 |     0 |    151800 |  0.00 |
 | F8 Muxes                |    0 |     0 |     75900 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   11 |     0 |       600 |  1.83 |
+| Bonded IOB                  |   36 |     0 |       600 |  6.00 |
 | Bonded IPADs                |    0 |     0 |        62 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        40 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        14 |  0.00 |
@@ -151,12 +151,11 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    7 |                  IO |
+| LUT2     |  175 |                 LUT |
+| IBUF     |   32 |                  IO |
+| CARRY4   |   28 |          CarryLogic |
 | OBUF     |    4 |                  IO |
-| LUT6     |    4 |                 LUT |
-| LUT2     |    2 |                 LUT |
-| MUXF7    |    1 |               MuxFx |
-| LUT5     |    1 |                 LUT |
+| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 
