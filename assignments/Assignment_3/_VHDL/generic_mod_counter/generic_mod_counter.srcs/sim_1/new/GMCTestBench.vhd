@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.common.all;
 
 entity GMCTestBench is
 
@@ -29,10 +30,10 @@ end GMCTestBench;
 architecture Behavioral of GMCTestBench is
   component GenericModCounter is
     port (
-        modInput: modType:= N;
-        counterOutput: integer;
-        asyncReset: std_logic;
-        clk: std_logic
+        modInput: in modType := 4;
+        counterOutput: out integer;
+        asyncReset: in std_logic;
+        clk: in std_logic
     );
   end component;
 
