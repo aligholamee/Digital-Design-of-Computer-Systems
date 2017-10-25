@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.common.all;
 
 entity GenericModCounter is
-    generic N(integer := 4);
+    generic (N: integer := 4);
     port (
         modInput: integer:= N;
         counterOutput: integer;
