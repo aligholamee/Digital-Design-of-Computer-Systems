@@ -26,7 +26,7 @@ use work.common.all;
 entity GenericModCounter is
     generic (N: integer := 4);
     port (
-        modInput: integer:= N;
+        modInput: modType:= N;
         counterOutput: integer;
         asyncReset: std_logic;
         clk: std_logic
