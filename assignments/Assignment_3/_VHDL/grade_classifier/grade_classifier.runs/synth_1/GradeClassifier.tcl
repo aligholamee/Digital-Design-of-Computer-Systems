@@ -13,7 +13,10 @@ set_property parent.project_path {C:/Users/Ali Gholami/Desktop/onGoing/Digital D
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-read_vhdl -library xil_defaultlib {{C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sources_1/new/grade_classifier.vhd}}
+read_vhdl -library xil_defaultlib {
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sources_1/new/grade_type.vhd}
+  {C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sources_1/new/grade_classifier.vhd}
+}
 synth_design -top GradeClassifier -part xc7vx485tffg1157-1
 write_checkpoint -noxdef GradeClassifier.dcp
 catch { report_utilization -file GradeClassifier_utilization_synth.rpt -pb GradeClassifier_utilization_synth.pb }

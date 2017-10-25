@@ -28,17 +28,22 @@ entity GCTestBench is
 end GCTestBench;
 
 architecture Gate of GCTestBench is
-    component GradeClassifier is port(
+    component GradeClassifier is 
+    port(
         gradeInput: in gradeType;
-        a, b, c, d: out bit
+        a, b, c, d: buffer bit;
+        clk: in std_logic;
+        asyncReset: buffer std_logic
     );
     end component GradeClassifier;
 
     signal OutputVector: bit_vector(3 downto 0);
     signal GradeInput: gradeType;
+    signal CLK: std_logic;
+    signal RST: std_logic;
 
 begin
-    GC1: GradeClassifier port map(GradeInput, OutputVector(3), OutputVector(2), OutputVector(1), OutputVector(0));
+    GC1: GradeClassifier port map(GradeInput, OutputVector(3), OutputVector(2), OutputVector(1), OutputVector(0), CLK, RST);
 
     process
         begin
