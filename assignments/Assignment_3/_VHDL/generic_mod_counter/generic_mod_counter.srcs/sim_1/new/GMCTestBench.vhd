@@ -30,11 +30,11 @@ end GMCTestBench;
 architecture Behavioral of GMCTestBench is
   component GenericModCounter is
     port (
-        modInput: in modType := 4;
-        counterOutput: out integer;
-        asyncReset: in std_logic;
-        clk: in std_logic
-    );
+      modInput: in integer := N;
+      counterOutput: buffer integer;
+      asyncReset: in std_logic;
+      clk: in std_logic
+  );
   end component;
 
   signal ModInput: integer;
