@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,25 +34,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity LightController is
     port(
-        sensor_a: in integer;
-        sensor_b: in integer;
-        sensor_c: in integer;
-        sensor_d: in integer;
-        sens_avg: buffer integer;
+        sensor_a: in unsigned(8 downto 0);
+        sensor_b: in unsigned(8 downto 0);
+        sensor_c: in unsigned(8 downto 0);
+        sensor_d: in unsigned(8 downto 0);
+        sens_avg: buffer unsigned(9 downto 0);
         lighting_power: out std_logic
     );
 end LightController;
 
-architecture  of LightControllerConcurrent is
+architecture RTL of LightController is
 
 begin
-
-
-end LightControllerConcurrent;
-
-
-architecture of LightControllerSequential is 
-
-begin
-
-end LightControllerSequential;
+    sens_avg <= '0' & (sensor_a + sensor_b + sensor_c + sensor_d);
+    sens_avg <= shift_right(sens_avg, 2);
+    lighting_power <= '1' when (sens_avg < "001100100") else '0';
+end RTL;
