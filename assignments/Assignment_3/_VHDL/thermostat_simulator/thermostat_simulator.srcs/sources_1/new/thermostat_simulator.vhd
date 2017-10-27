@@ -33,15 +33,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Thermostat is
     port(
-        input_a: in integer;
-        input_b: in integer;
+        thershold_input: in integer;
+        sensor_input: in integer;
         res: out boolean
     );
 end Thermostat;
 
-architecture of Thermostat is
+architecture RTL of Thermostat is
 
 begin
+    
 
 
 end ;
