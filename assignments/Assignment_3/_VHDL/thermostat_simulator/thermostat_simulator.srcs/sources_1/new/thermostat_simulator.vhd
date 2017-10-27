@@ -61,3 +61,18 @@ begin
         end if;
     end process;
 end RTL;
+
+architecture Behavioral of Thermostat is 
+
+begin 
+    -- Asynchronous reset
+    res <= false when (asyncReset = '1') else res;
+    thershold_input <= 0 when (asyncReset = '1') else thershold_input;
+    sensor_input <= 0 when (asyncReset = '1') else sensor_input;
+    
+    -- In case the reset is not enabled
+    -- Do the rest of the job
+    res <= false when (sensor_input > (thershold_input + 5)) else 
+           true when (sensor_input < (thershold_input - 5)) else
+           res;
+end Behavioral;
