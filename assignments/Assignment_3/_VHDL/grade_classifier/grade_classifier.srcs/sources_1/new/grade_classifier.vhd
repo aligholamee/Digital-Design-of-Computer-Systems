@@ -28,15 +28,14 @@ use work.common.all;
 entity GradeClassifier is
     port(
         gradeInput: in gradeType;
-        a, b, c, d: buffer bit;
-        clk: in std_logic
+        a, b, c, d: out bit
     );
 end GradeClassifier;
 
 architecture RTL of GradeClassifier is
 begin
-    a <= '1' when (gradeInput >= 51 and gradeInput < 60 and rising_edge(clk));
-    b <= '1' when (gradeInput >= 61 and gradeInput < 70 and rising_edge(clk));
-    c <= '1' when (gradeInput >= 71 and gradeInput < 85 and rising_edge(clk));
-    d <= '1' when (gradeInput >= 86 and rising_edge(clk));
+    a <= '1' when (gradeInput >= 51 and gradeInput < 60);
+    b <= '1' when (gradeInput >= 60 and gradeInput < 70);
+    c <= '1' when (gradeInput >= 70 and gradeInput < 85);
+    d <= '1' when (gradeInput >= 86);
 end RTL;

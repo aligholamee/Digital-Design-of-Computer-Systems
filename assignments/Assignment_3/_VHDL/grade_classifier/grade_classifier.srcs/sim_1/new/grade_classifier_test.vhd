@@ -31,32 +31,33 @@ architecture Gate of GCTestBench is
     component GradeClassifier is 
     port(
         gradeInput: in gradeType;
-        a, b, c, d: buffer bit;
-        clk: in std_logic
+        a, b, c, d: out bit
     );
     end component GradeClassifier;
 
-    signal OutputVector: bit_vector(3 downto 0);
+    signal D_OUTPUT: bit;
+    signal C_OUTPUT: bit;
+    signal B_OUTPUT: bit;
+    signal A_OUTPUT: bit;
     signal GradeInput: gradeType;
-    signal CLK: std_logic;
 
 begin
-    GC1: GradeClassifier port map(GradeInput, OutputVector(3), OutputVector(2), OutputVector(1), OutputVector(0), CLK);
+    GC1: GradeClassifier port map(GradeInput, A_OUTPUT, B_OUTPUT, C_OUTPUT, D_OUTPUT);
 
     process
         begin
             GradeInput <= 10;
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 20; 
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 50;
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 60;
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 70;
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 85;
-            wait for 100 ns;
+            wait for 500 ns;
             GradeInput <= 95;
             wait;
         end process;

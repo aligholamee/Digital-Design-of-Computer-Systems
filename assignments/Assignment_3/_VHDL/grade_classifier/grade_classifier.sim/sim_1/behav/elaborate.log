@@ -6,4 +6,11 @@ Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
-ERROR: [XSIM 43-3249] File C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.srcs/sim_1/new/grade_classifier_test.vhd, line 40. Unresolved signal "outputvector" is multiply driven.
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.common
+Compiling architecture rtl of entity xil_defaultlib.GradeClassifier [gradeclassifier_default]
+Compiling architecture gate of entity xil_defaultlib.gctestbench
+Built simulation snapshot GCTestBench_behav
