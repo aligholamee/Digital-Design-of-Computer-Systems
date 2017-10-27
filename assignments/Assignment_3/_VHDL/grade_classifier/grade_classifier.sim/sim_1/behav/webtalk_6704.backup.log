@@ -2,11 +2,13 @@
 # Webtalk v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Fri Oct 27 11:02:51 2017
-# Process ID: 3256
+# Start of session at: Fri Oct 27 11:11:40 2017
+# Process ID: 6704
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.sim/sim_1/behav
 # Command line: wbtcv.exe -mode batch -source C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.sim/sim_1/behav/xsim.dir/GCTestBench_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.sim/sim_1/behav/webtalk.log
 # Journal file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Ali -notrace
+couldn't read file "C:/Users/Ali": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 27 11:11:40 2017...

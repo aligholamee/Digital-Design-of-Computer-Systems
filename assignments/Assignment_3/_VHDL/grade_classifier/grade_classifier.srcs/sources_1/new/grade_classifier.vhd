@@ -34,8 +34,8 @@ end GradeClassifier;
 
 architecture RTL of GradeClassifier is
 begin
-    a <= '1' when (gradeInput >= 51 and gradeInput < 60);
-    b <= '1' when (gradeInput >= 60 and gradeInput < 70);
-    c <= '1' when (gradeInput >= 70 and gradeInput < 85);
-    d <= '1' when (gradeInput >= 86);
+    a <= '1' when (gradeInput >= 51 and gradeInput < 60) else '0';
+    b <= '1' when (gradeInput >= 60 and gradeInput < 70) else '0';
+    c <= '1' when (gradeInput >= 70 and gradeInput < 85) else '0';
+    d <= '1' when (gradeInput >= 86) else '0';
 end RTL;

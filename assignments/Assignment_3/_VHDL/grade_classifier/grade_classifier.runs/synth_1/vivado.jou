@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Fri Oct 27 11:07:35 2017
-# Process ID: 11684
+# Start of session at: Fri Oct 27 11:11:10 2017
+# Process ID: 7412
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.runs/synth_1
 # Command line: vivado.exe -log GradeClassifier.vds -mode batch -messageDb vivado.pb -notrace -source GradeClassifier.tcl
 # Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/grade_classifier/grade_classifier.runs/synth_1/GradeClassifier.vds
