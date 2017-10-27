@@ -48,7 +48,7 @@ architecture RTL of LightController is
 begin
     sens_avg <= '0' & (sensor_a + sensor_b + sensor_c + sensor_d);
     sens_avg <= shift_right(sens_avg, 2);
-    lighting_power <= '1' when (sens_avg < "001100100") else '0';
+    lighting_power <= '1' when (sens_avg < "0001100100") else '0';
 end RTL;
 
 architecture Behavioral of LightController is 
@@ -56,17 +56,18 @@ architecture Behavioral of LightController is
 begin 
     process(CLK, RST)
     begin
-        if(CLK^event and CLK = '1') then
+        if(CLK'event and CLK = '1') then
             if(RST = '1') then
-                sens_avg <= '000000000';
+                sens_avg <= "0000000000";
                 lighting_power <= '0';
             else 
                 sens_avg <= '0' & (sensor_a + sensor_b + sensor_c + sensor_d);
-                if (sens_avg < "001100100") then
+                if (sens_avg < "0001100100") then
                     lighting_power <= '1';
                 else 
                     lighting_power <= '0';
                 end if;
             end if;
+        end if; 
     end process;
 end Behavioral;
