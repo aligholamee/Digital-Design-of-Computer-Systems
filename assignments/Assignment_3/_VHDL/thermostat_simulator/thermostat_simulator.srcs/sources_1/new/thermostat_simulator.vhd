@@ -33,16 +33,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Thermostat is
     port(
-        thershold_input: in integer;
-        sensor_input: in integer;
-        res: out boolean
+        thershold_input: buffer integer;
+        sensor_input: buffer integer;
+        res: out boolean;
+        clk: in std_logic;
+        asyncReset: in std_logic
     );
 end Thermostat;
 
 architecture RTL of Thermostat is
-
-begin
     
-
-
-end ;
+begin
+    process(clk, asyncReset)
+    begin 
+        if(asyncReset = '1') then
+            -- Reset the thermostat simulator
+            thershold_input <= 0;
+            sensor_input <= 0;
+            res <= false;
+        elsif(rising_edge(clk)) then
+            -- Implements the comparison logic
+            if(sensor_input > (thershold_input + 5)) then
+                res <= false;     -- Turn off the thermostat
+            elsif(sensor_input < (thershold_input - 5)) then
+                res <= true;     -- Turn on the thermostat
+            end if;
+        end if;
+    end process;
+end RTL;

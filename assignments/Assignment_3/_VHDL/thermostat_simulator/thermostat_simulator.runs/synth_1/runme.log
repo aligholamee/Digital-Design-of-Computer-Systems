@@ -1,0 +1,310 @@
+
+*** Running vivado
+    with args -log Thermostat.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Thermostat.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source Thermostat.tcl -notrace
+Command: synth_design -top Thermostat -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 306.336 ; gain = 135.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Thermostat' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Thermostat' (1#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:44]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.566 ; gain = 163.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.566 ; gain = 163.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 334.566 ; gain = 163.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:56]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:56]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:56]
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+WARNING: [Synth 8-327] inferring latch for variable 'thershold_input_reg' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 338.914 ; gain = 167.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Thermostat 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/thermostat_simulator/thermostat_simulator.srcs/sources_1/new/thermostat_simulator.vhd:56]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[0] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[1] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[2] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[3] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[4] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[5] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[6] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[7] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[8] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[9] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[10] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[11] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[12] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[13] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[14] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[15] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[16] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[17] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[18] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[19] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[20] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[21] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[22] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[23] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[24] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[25] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[26] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[27] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[28] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[29] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3886] merging instance '\thershold_input_reg[30] ' (LD) to '\thershold_input_reg[31] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\thershold_input_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[31] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[30] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[29] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[28] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[27] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[26] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[25] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[24] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[23] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[22] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[21] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[20] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[19] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[18] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[17] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[16] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[15] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[14] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[13] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[12] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[11] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[10] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[9] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[8] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[7] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[6] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[5] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[4] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[3] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[2] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[1] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (\thershold_input_reg[0] ) is unused and will be removed from module Thermostat.
+WARNING: [Synth 8-3332] Sequential element (res_reg) is unused and will be removed from module Thermostat.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    65|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    65|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 610.871 ; gain = 340.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 610.871 ; gain = 439.664
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 678.305 ; gain = 479.328
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 678.305 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 18:57:24 2017...
