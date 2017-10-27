@@ -29,20 +29,12 @@ entity GradeClassifier is
     port(
         gradeInput: in gradeType;
         a, b, c, d: buffer bit;
-        clk: in std_logic;
-        asyncReset: buffer std_logic
+        clk: in std_logic
     );
 end GradeClassifier;
 
 architecture RTL of GradeClassifier is
 begin
-
-    a <= '0' when (asyncReset = '1') else a;
-    b <= '0' when (asyncReset = '1') else b;
-    c <= '0' when (asyncReset = '1') else c;
-    d <= '0' when (asyncReset = '1') else d;
-    asyncReset <= '0' when (asyncReset = '1') else asyncReset;
-
     a <= '1' when (gradeInput >= 51 and gradeInput < 60 and rising_edge(clk));
     b <= '1' when (gradeInput >= 61 and gradeInput < 70 and rising_edge(clk));
     c <= '1' when (gradeInput >= 71 and gradeInput < 85 and rising_edge(clk));
