@@ -34,7 +34,7 @@ entity GradeClassifier is
     );
 end GradeClassifier;
 
-architecture Behavioral of GradeClassifier is
+architecture RTL of GradeClassifier is
 begin
 
     a <= '0' when (asyncReset = '1') else a;
@@ -43,8 +43,8 @@ begin
     d <= '0' when (asyncReset = '1') else d;
     asyncReset <= '0' when (asyncReset = '1') else asyncReset;
 
-    a <= '1' when (gradeInput >= 51 and gradeInput < 60 and clk'event and clk = '1');
-    b <= '1' when (gradeInput >= 61 and gradeInput < 70 and clk'event and clk = '1');
-    c <= '1' when (gradeInput >= 71 and gradeInput < 85 and clk'event and clk = '1');
-    d <= '1' when (gradeInput >= 86 and clk'event and clk = '1');
-end Behavioral;
+    a <= '1' when (gradeInput >= 51 and gradeInput < 60 and rising_edge(clk));
+    b <= '1' when (gradeInput >= 61 and gradeInput < 70 and rising_edge(clk));
+    c <= '1' when (gradeInput >= 71 and gradeInput < 85 and rising_edge(clk));
+    d <= '1' when (gradeInput >= 86 and rising_edge(clk));
+end RTL;
