@@ -43,15 +43,21 @@ architecture Behavioral of AdderTB is
         sum: out std_logic_vector(4 downto 0)
     );
     end component ADD4;
+    
+    signal A_S: std_logic_vector(3 downto 0);
+    signal B_S: std_logic_vector(3 downto 0);
+    signal SUM_S: std_logic_vector(4 downto 0);
+    -- Control Signal
 begin
-    a <= "0000";
-    b <= "0000";
+    ADDER: ADD4 port map(A_S, B_S, SUM_S);
+    A_S <= "0000";
+    B_S <= "0000";
     process
     begin 
         for i in 15 downto 0 loop
-            b <= b + 1;
+            B_S <= B_S + 1;
             for j in 15 downto 0 loop
-                a <= a + 1; 
+                A_S <= A_S + 1; 
                 wait for 120ns;
             end loop;
         end loop;
