@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -55,9 +56,9 @@ begin
     process
     begin 
         for i in 15 downto 0 loop
-            B_S <= B_S + 1;
+            B_S <= B_S + "0001";
             for j in 15 downto 0 loop
-                A_S <= A_S + 1; 
+                A_S <= A_S + "0001"; 
                 wait for 120ns;
             end loop;
         end loop;

@@ -1,8 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sources_1/new/fb_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADD4
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity AdderTB
-ERROR: [VRFC 10-91] a is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:47]
-ERROR: [VRFC 10-91] b is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:48]
-ERROR: [VRFC 10-91] b is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:52]
-ERROR: [VRFC 10-91] a is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:54]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:38]
-INFO: [VRFC 10-240] VHDL file C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd ignored due to errors
