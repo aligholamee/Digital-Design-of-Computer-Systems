@@ -57,7 +57,6 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="AdderTB"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>

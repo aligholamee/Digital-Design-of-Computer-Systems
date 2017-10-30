@@ -3,5 +3,13 @@ Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto b7100200da7a41f880239045e49f9b41 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot AdderTB_behav xil_defaultlib.AdderTB -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-664] expression has 4 elements ; expected 5 [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:50]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit addertb in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.addertb
+Built simulation snapshot AdderTB_behav
