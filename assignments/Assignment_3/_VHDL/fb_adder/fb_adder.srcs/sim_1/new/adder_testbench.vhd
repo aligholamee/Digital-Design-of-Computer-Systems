@@ -21,7 +21,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.common.all;
 use IEEE.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
@@ -54,6 +53,7 @@ begin
     ADDER: ADD4 port map(A_S, B_S, SUM_S);  
     process
     begin 
+            A_S <= "0000";
         A_S <= A_S + "0001";
         wait for 150 ns;
         B_S <= B_S + "0001";
