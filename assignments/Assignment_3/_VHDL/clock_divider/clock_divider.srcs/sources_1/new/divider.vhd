@@ -35,6 +35,7 @@ entity ClockDivider is
     port(
         inputClock: buffer std_logic;
         outputClock: buffer std_logic;
+        clkFreq: in integer;            -- Clock frequency input should be in Hertz.
         enable: buffer std_ulogic;
         asyncReset: buffer std_logic
     );
@@ -44,6 +45,16 @@ architecture Behavioral of ClockDivider is
     signal temporal: std_logic;
     signal counter_case1 : integer range 0 to 124999 := 0; 
     signal counter_case2 : integer range 0 to 5000 := 0;  
+    
+    function caclculateCounter (
+        frequency: in integer;)
+        return integer is
+        countsToBuildHalfFreq: integer;
+    begin
+        variable temp: integer := 0;
+        temp := 1 / frequency;
+        countsToBuildHalfFreq := temp/2;
+    end;
 begin
     process(asyncReset, inputClock)
     begin 
@@ -52,14 +63,14 @@ begin
             enable <= '0';
             asyncReset <= '0';
         elsif(enable = '1' and rising_edge(inputClock)) then
-            if(counter_case1 = 124999) then
+            if(counter_case1 = caclculateCounter(clkFreq)) then
                 temporal <= not(temporal);
                 counter_case1 <= 0;
             else
                 counter_case1 <= counter_case1 + 1;
             end if;
         elsif(enable = '0' and rising_edge(inputClock)) then 
-            if(counter_case2 = 5000) then
+            if(counter_case2 = caclculateCounter(clkFreq) then
                 temporal <= not(temporal);
                 counter_case2 <= 0;
             else 
