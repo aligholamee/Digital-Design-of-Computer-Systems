@@ -54,6 +54,7 @@ architecture Behavioral of ClockDivider is
         variable temp: integer := 0;
         temp := 1 / frequency;
         countsToBuildHalfFreq := temp/2;
+        return integer(countsToBuildHalfFreq);
     end;
 begin
     process(asyncReset, inputClock)
