@@ -36,11 +36,10 @@ entity AnalysisQ6 is
 end AnalysisQ6;
 
 architecture Behavioral of AnalysisQ6 is
-
-begin
     signal x, w: std_logic;
     signal y, z: std_logic;
 
+begin
     process(x, y)
     begin
         z <= '0';
