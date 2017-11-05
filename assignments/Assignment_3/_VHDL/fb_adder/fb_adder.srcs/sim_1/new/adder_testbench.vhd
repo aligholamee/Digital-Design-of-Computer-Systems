@@ -20,8 +20,9 @@
 
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_unsigned.all;
+USE ieee.std_logic_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -54,10 +55,9 @@ begin
     begin 
         for i in 0 to 15 loop   
                 for j in 0 to 15 loop
-                        A_S <= std_logic_vector(to_unsigned(i, 4))
-                        B_S <= std_logic_vector(to_unsigned(j, 4))
-                end loop
-        end loop
-  
+                        A_S <= std_logic_vector(to_unsigned(i, 4));
+                        B_S <= std_logic_vector(to_unsigned(j, 4));
+                end loop;
+        end loop;
     end process;
 end Behavioral;
