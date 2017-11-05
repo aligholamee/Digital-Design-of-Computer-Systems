@@ -2,10 +2,4 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Di
 INFO: [VRFC 10-307] analyzing entity ADD4
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity AdderTB
-ERROR: [VRFC 10-91] to_unsigned is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:57]
-ERROR: [VRFC 10-1083] near std_logic_vector ; type conversion expression type cannot be determined uniquely [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:57]
-ERROR: [VRFC 10-91] to_unsigned is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:58]
-ERROR: [VRFC 10-1083] near std_logic_vector ; type conversion expression type cannot be determined uniquely [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:58]
-WARNING: [VRFC 10-1256] possible infinite loop; process does not have a wait statement [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:53]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:39]
-INFO: [VRFC 10-240] VHDL file C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd ignored due to errors
+WARNING: [VRFC 10-1256] possible infinite loop; process does not have a wait statement [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:54]

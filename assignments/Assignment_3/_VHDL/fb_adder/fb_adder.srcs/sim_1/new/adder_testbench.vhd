@@ -57,6 +57,7 @@ begin
                 for j in 0 to 15 loop
                         A_S <= std_logic_vector(to_unsigned(i, 4));
                         B_S <= std_logic_vector(to_unsigned(j, 4));
+                        wait for 50 ns;
                 end loop;
         end loop;
     end process;
