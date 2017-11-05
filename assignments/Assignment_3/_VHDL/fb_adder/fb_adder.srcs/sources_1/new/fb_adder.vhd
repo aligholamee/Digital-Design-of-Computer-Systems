@@ -44,4 +44,5 @@ architecture test of ADD4 is
 
 begin
     sum <= ('0' & a) + ('0' & b);
+    assert (sum <= 32) report "Addition overflow!" severity error;
 end test;

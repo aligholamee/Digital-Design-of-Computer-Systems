@@ -2,4 +2,3 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Di
 INFO: [VRFC 10-307] analyzing entity ADD4
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity AdderTB
-WARNING: [VRFC 10-1256] possible infinite loop; process does not have a wait statement [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_3/_VHDL/fb_adder/fb_adder.srcs/sim_1/new/adder_testbench.vhd:54]
