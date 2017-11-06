@@ -43,25 +43,25 @@ begin
     begin 
         case current_state is
             when START => 
-                if((d,p) = '00')
+                if((dInput,pInput) = '00')
                     next_state = START;
-                elsif((d,p) = '01')
+                elsif((dInput,pInput) = '01')
                     next_state = FULL;
                 else 
                     next_state = P200;
                 end if;
             when P200 => 
-                if((d,p) = '00')
+                if((dInput,pInput) = '00')
                     next_state = current_state;
-                elsif((d,p) = '01') 
+                elsif((dInput,pInput) = '01') 
                     next_state = FULL;
                 else 
                     next_state = P400;
                 end if;
             when P400 =>
-                if((d,p) = '00')
+                if((dInput,pInput) = '00')
                     next_state = current_state;
-                else((d,p) = '01')
+                else((dInput,pInput) = '01')
                     next_state = FULL;
                 end if;
             when FULL =>
@@ -69,4 +69,33 @@ begin
         end case;
     end process;
 
-                
+    -- CONTROLS THE FINAL COMBINATIONAL CIRCUIT
+    -- GENERATES THE OUTPUTS BASED ON THE CURRENT STATE AND INPUTS
+    CC2: process(current_state, dInput, pInput)
+            variable DP := (dInput, pInput);
+    begin
+        case current_state is 
+            when START => 
+                if pInput = '0' then 
+                    chocolateOutput <= '0';
+                else 
+                    chocolateOutput <= '1';
+                end if;
+            when P200 => 
+                if pInput = '0' then 
+                    chocolateOutput <= '0';
+                else 
+                    chocolateOutput <= '1';
+                end if;
+            when P400 => 
+                if DP = "00" or DP = "11" then 
+                    chocolateOutput <= '0';
+                else 
+                    chocolateOutput <= '1';
+            when FULL => 
+                chocolateOutput <= '0';
+        end case;
+    end process;
+end architecture ChocolateMachine;
+         
+    
