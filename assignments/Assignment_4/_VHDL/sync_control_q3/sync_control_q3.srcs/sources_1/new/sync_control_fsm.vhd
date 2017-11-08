@@ -41,7 +41,6 @@ architecture FSM of SyncControl is
 
     -- DEFINE THE CURRENT_STATE AND NEXT_STATE OF THE FSM
     signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
-    signal pulse_controller: std_logic := '0';
 begin
 
     -- PROCESS TO DESCRIBE THE CENTRAL REGISTERS OF FSM
@@ -51,28 +50,24 @@ begin
         if(rising_edge(clk)) then
             CURRENT_STATE <= NEXT_STATE;
             pulse_contoller <= '0';
-        elsif(falling_edge(clk)) 
-            -- THIS WILL TELL THE OUTPUT1_ENABLE_STATE TO CHANGE THE STATE TO THE NEXT STATE
-            -- FALLING EDGE HAS OCCURRED
-            pulse_controller <= '1';
-        else
-            -- AVOID LATCH
-            pulse_controller <= '-';
     end process;
 
     -- PROCESS TO DESCRIBE THE NEXT_STATE GENERATOR COMBINATIONAL CIRCUIT
-    CC1: process(pulse_controller, CURRENT_STATE, input_P)
+    CC1: process(CURRENT_STATE, input_P)
     begin 
         case CURRENT_STATE is 
             when START =>
                 if(rising_edge(input_P))
                     NEXT_STATE <= OUTPUT1_ENABLE_STATE;
                 else
-                    NEXT_STATE <= OUTPUT2_ENABLE_STATE;
+                    NEXT_STATE <= START;
                 end if;
             when OUTPUT1_ENABLE_STATE => 
-                if(pulse_controller = '1')
-                    
+                wait until falling_edge(clk)
+                    NEXT_STATE <= OUTPUT2_ENABLE_STATE;
+                else 
+                    NEXT_STATE <= 
+
 
 
 
