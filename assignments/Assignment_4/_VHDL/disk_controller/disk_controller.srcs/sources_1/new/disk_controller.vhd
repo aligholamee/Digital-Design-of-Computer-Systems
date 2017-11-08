@@ -70,7 +70,29 @@ begin
                             if(SERVICE_DIRECTION = '0') then 
                                 if(service_request_1 = '1') then
                                     STATE <= P1_SERVICE;
-                                    file
+                                    -- GRAB THE ADDERS 
+                                    -- GRAB THE DATA 
+                                    -- PUT IT ON THE file_output
+                                elsif(service_request_2 = '1') then
+                                    STATE <= P2_SERVICE;
+                                    -- GRAB THE ADDERS 
+                                    -- GRAB THE DATA 
+                                    -- PUT IT ON THE file_output
+                                elsif(service_request_3 = '1') then 
+                                    STATE <= P3_SERVICE;
+                                    -- GRAB THE ADDERS 
+                                    -- GRAB THE DATA 
+                                    -- PUT IT ON THE file_output
+                                elseif(service_request_4 = '1') then
+                                    STATE <= P4_SERVICE;
+                                    -- GRAB THE ADDERS 
+                                    -- GRAB THE DATA 
+                                    -- PUT IT ON THE file_output
+                                else
+                                    STATE <= START;
+                                    file_output <= '-';
+                                end if;
+                            
          end process;
 
 end FSM;
