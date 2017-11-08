@@ -43,7 +43,8 @@ architecture FSM of SyncControl is
     signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
 
     -- DEFINE THE TEMP SIGNAL USED TO ATTACH THE OUTPUT OF FINAL COMBINATIONAL CIRCUIT TO THE SHIF-REGISTERS
-    signal TEMP_S: std_logic := '0';
+    signal TEMP_S_OUTPUT1: std_logic := '0';
+    signal TEMP_S_OUTPUT2: std_logic := '0';
 
 begin
 
@@ -86,18 +87,21 @@ begin
     begin 
         case NEXT_STATE is 
             when START =>
-                output_p1 <= '0';
-                output_p2 <= '0';
+                TEMP_S_OUTPUT1 <= '0';
+                TEMP_S_OUTPUT2 <= '0';
             when OUTPUT1_ENABLE_STATE => 
-                output_p1 <= '1';
-                output_p2 <= '0';
+                TEMP_S_OUTPUT1 <= '1';
+                TEMP_S_OUTPUT2 <= '0';
             when OUTPUT2_ENABLE_STATE => 
-                output_p1 <= '0';
-                output_p2 <= '1';
+                TEMP_S_OUTPUT1 <= '0';
+                TEMP_S_OUTPUT2 <= '1';
             when others => 
-                output_p1 <= '-';
-                output_p2 <= '-';
+                TEMP_S_OUTPUT1 <= '-';
+                TEMP_S_OUTPUT2 <= '-';
     end process;
+
+    -- PORCESS TO DESCRIBE THE FINAL SHIFT REGISTERS
+    SR_SYNC: process()
 end FSM;
 
 
