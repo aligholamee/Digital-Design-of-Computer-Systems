@@ -60,17 +60,19 @@ begin
                 if(rising_edge(input_P))
                     NEXT_STATE <= OUTPUT1_ENABLE_STATE;
                 else
-                    NEXT_STATE <= START;
+                    NEXT_STATE <= CURRENT_STATE;
                 end if;
             when OUTPUT1_ENABLE_STATE => 
                 wait until falling_edge(clk)
                     NEXT_STATE <= OUTPUT2_ENABLE_STATE;
                 else 
-                    NEXT_STATE <= 
-
-
-
-
-        
+                    NEXT_STATE <= CURRENT_STATE;
+            when OUTPUT2_ENABLE_STATE => 
+                if(input_P = '1')
+                    NEXT_STATE = CURRENT_STATE;
+                else 
+                    NEXT_STATE = START;
+            when others => 
+                NEXT_STATE <= RECOVERY;
     end process;
 end FSM;
