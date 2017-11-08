@@ -35,7 +35,18 @@ entity DiskController is
 end DiskController;
 
 architecture FSM of DiskController is
+    -- DEFINITION OF THE STATE_TYPE
+    type STATE_TYPE is (START, P1_SERVICE, P2_SERVICE, P3_SERVICE, P4_SERVICE);
 
+    -- IMPLEMENTS THE SAFE FSM CREDINTIALS
+    attribute safe_recovery_state: string;
+    attribute safe_recovery_state of STATE: signal is "RECOVERY";
+
+    -- IMPLEMENTS THE WHOLE FSM USING 1 PROCESS 
+    signal STATE: STATE_TYPE := START;
+
+    -- IMPLEMENTS THE DIRECTION OF SERVICE(0: PORT1 TO PORT4)(1: PORT4 DOWNTO PORT0)
+    signal SERVICE_DIRECTION: std_logic := '0';
 begin
 
 
