@@ -77,8 +77,8 @@ begin
                     NEXT_STATE = CURRENT_STATE;
                 else 
                     NEXT_STATE = START;
-            when others => 
-                NEXT_STATE <= RECOVERY;
+            when RECOVERY => 
+                NEXT_STATE <= START;
     end process;
 
     -- PROCESS TO DESCRIBE THE OUTPUTS ON EACH STATE
@@ -95,7 +95,7 @@ begin
             when OUTPUT2_ENABLE_STATE => 
                 TEMP_S_OUTPUT1 <= '0';
                 TEMP_S_OUTPUT2 <= '1';
-            when others => 
+            when RECOVERY => 
                 TEMP_S_OUTPUT1 <= '-';
                 TEMP_S_OUTPUT2 <= '-';
     end process;
