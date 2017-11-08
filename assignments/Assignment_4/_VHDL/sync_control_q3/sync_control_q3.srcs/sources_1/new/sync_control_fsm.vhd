@@ -44,7 +44,7 @@ architecture FSM of SyncControl is
 
     -- DEFINE THE TEMP SIGNAL USED TO ATTACH THE OUTPUT OF FINAL COMBINATIONAL CIRCUIT TO THE SHIF-REGISTERS
     signal TEMP_S: std_logic := '0';
-    
+
 begin
 
     -- PROCESS TO DESCRIBE THE CENTRAL REGISTERS OF FSM
@@ -80,7 +80,24 @@ begin
                 NEXT_STATE <= RECOVERY;
     end process;
 
-    -- PROCESS TO DESCRIBE THE NEXT_STATE GENERAT
+    -- PROCESS TO DESCRIBE THE OUTPUTS ON EACH STATE
+    -- THIS WILL BE A MOORE TYPE FSM
+    CC2: process(NEXT_STATE)
+    begin 
+        case NEXT_STATE is 
+            when START =>
+                output_p1 <= '0';
+                output_p2 <= '0';
+            when OUTPUT1_ENABLE_STATE => 
+                output_p1 <= '1';
+                output_p2 <= '0';
+            when OUTPUT2_ENABLE_STATE => 
+                output_p1 <= '0';
+                output_p2 <= '1';
+            when others => 
+                output_p1 <= '-';
+                output_p2 <= '-';
+    end process;
 end FSM;
 
 
