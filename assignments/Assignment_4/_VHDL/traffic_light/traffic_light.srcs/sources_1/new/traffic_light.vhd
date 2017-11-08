@@ -77,5 +77,7 @@ begin
                         when RECOVERY => 
                             -- GREEN LIGHT AT THIS MOMENT COULD BE DANGEROUS :D
                             STATE <= RED_LIGHT;
+                end if;
+            end if;
          end process;
 end FSM;
