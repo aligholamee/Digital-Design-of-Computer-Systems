@@ -41,6 +41,10 @@ architecture FSM of SyncControl is
 
     -- DEFINE THE CURRENT_STATE AND NEXT_STATE OF THE FSM
     signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
+
+    -- DEFINE THE TEMP SIGNAL USED TO ATTACH THE OUTPUT OF FINAL COMBINATIONAL CIRCUIT TO THE SHIF-REGISTERS
+    signal TEMP_S: std_logic := '0';
+    
 begin
 
     -- PROCESS TO DESCRIBE THE CENTRAL REGISTERS OF FSM
@@ -75,4 +79,8 @@ begin
             when others => 
                 NEXT_STATE <= RECOVERY;
     end process;
+
+    -- PROCESS TO DESCRIBE THE NEXT_STATE GENERAT
 end FSM;
+
+
