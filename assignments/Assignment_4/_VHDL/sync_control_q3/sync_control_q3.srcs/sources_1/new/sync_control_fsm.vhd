@@ -101,7 +101,12 @@ begin
     end process;
 
     -- PORCESS TO DESCRIBE THE FINAL SHIFT REGISTERS
-    SR_SYNC: process()
+    SR_SYNC: process(clk, TEMP_S_OUTPUT1, TEMP_S_OUTPUT2)
+    begin 
+        if(rising_edge(clk))
+            output_p1 <= TEMP_S_OUTPUT1;
+            output_p2 <= TEMP_S_OUTPUT2;
+    end process;
 end FSM;
 
 
