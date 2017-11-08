@@ -101,6 +101,7 @@ begin
     end process;
 
     -- PORCESS TO DESCRIBE THE FINAL SHIFT REGISTERS
+    -- THIS WILL PROVIDE THE OUTPUT WITH CLOCKS HITTING :D
     SR_SYNC: process(clk, TEMP_S_OUTPUT1, TEMP_S_OUTPUT2)
     begin 
         if(rising_edge(clk))
