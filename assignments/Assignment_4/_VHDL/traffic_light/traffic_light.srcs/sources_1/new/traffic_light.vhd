@@ -61,12 +61,21 @@ begin
                         when YELLOW_LIGHT => 
                             if(YELLOW_PULSE = 30) 
                                 -- GO TO THE RED STATE
+                                -- THE COUNTER FOR THE RED LIGHT STARTS HERE
                                 STATE <= RED_LIGHT;
                             else 
                                 -- INC THE YELLOW PULSE
                                 YELLOW_PULSE <= YELLOW_PULSE + 1;
+                                STATE <= YELLOW_LIGHT;
                             end if;
                         when RED_LIGHT => 
+                            if(RED_PULSE = 100) then
+                                STATE <= GREEN_LIGHT;
+                            else 
+                                RED_PULSE <= RED_PULSE + 1;
+                                STATE <= RED_LIGHT;
+                        when RECOVERY => 
+                            -- GREEN LIGHT AT THIS MOMENT COULD BE DANGEROUS :D
+                            STATE <= RED_LIGHT;
          end process;
-
 end FSM;
