@@ -47,7 +47,6 @@ architecture FSM of SyncControl is
     signal TEMP_S_OUTPUT2: std_logic := '0';
 
 begin
-
     -- PROCESS TO DESCRIBE THE CENTRAL REGISTERS OF FSM
     -- THIS PROCESS CONTROLS THE FLIP-FLOPS
     FFs: process(clk)
@@ -55,6 +54,7 @@ begin
         if(rising_edge(clk)) then
             CURRENT_STATE <= NEXT_STATE;
             pulse_contoller <= '0';
+        end if;
     end process;
 
     -- PROCESS TO DESCRIBE THE NEXT_STATE GENERATOR COMBINATIONAL CIRCUIT
@@ -62,23 +62,26 @@ begin
     begin 
         case CURRENT_STATE is 
             when START =>
-                if(rising_edge(input_P))
+                if(rising_edge(input_P)) then
                     NEXT_STATE <= OUTPUT1_ENABLE_STATE;
                 else
                     NEXT_STATE <= CURRENT_STATE;
                 end if;
             when OUTPUT1_ENABLE_STATE => 
-                wait until falling_edge(clk)
+                if(falling_edge(clk)) then
                     NEXT_STATE <= OUTPUT2_ENABLE_STATE;
                 else 
                     NEXT_STATE <= CURRENT_STATE;
+                end if;
             when OUTPUT2_ENABLE_STATE => 
-                if(input_P = '1')
-                    NEXT_STATE = CURRENT_STATE;
+                if(input_P = '1') then
+                    NEXT_STATE <= CURRENT_STATE;
                 else 
-                    NEXT_STATE = START;
+                    NEXT_STATE <= START;
+                end if;
             when RECOVERY => 
                 NEXT_STATE <= START;
+        end case;
     end process;
 
     -- PROCESS TO DESCRIBE THE OUTPUTS ON EACH STATE
@@ -98,15 +101,17 @@ begin
             when RECOVERY => 
                 TEMP_S_OUTPUT1 <= '-';
                 TEMP_S_OUTPUT2 <= '-';
+        end case;
     end process;
 
     -- PORCESS TO DESCRIBE THE FINAL SHIFT REGISTERS
     -- THIS WILL PROVIDE THE OUTPUT WITH CLOCKS HITTING :D
     SR_SYNC: process(clk, TEMP_S_OUTPUT1, TEMP_S_OUTPUT2)
     begin 
-        if(rising_edge(clk))
+        if(rising_edge(clk)) then
             output_p1 <= TEMP_S_OUTPUT1;
             output_p2 <= TEMP_S_OUTPUT2;
+        end if;
     end process;
 end FSM;
 
