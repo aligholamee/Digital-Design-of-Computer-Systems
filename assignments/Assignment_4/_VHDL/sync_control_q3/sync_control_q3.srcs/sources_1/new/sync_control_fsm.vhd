@@ -35,13 +35,13 @@ end SyncControl;
 architecture FSM of SyncControl is
     type STATE_TYPE is (START, OUTPUT1_ENABLE_STATE, OUTPUT2_ENABLE_STATE, RECOVERY);
 
+    -- DEFINE THE CURRENT_STATE AND NEXT_STATE OF THE FSM
+    signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
+
     -- DEFINE THE RECOVERY STATE FOR THE SAFE FSM
     attribute safe_recovery_state: string;
     attribute safe_recovery_state of CURRENT_STATE: signal is "RECOVERY";
     attribute safe_recovery_state of NEXT_STATE: signal is "RECOVERY";
-
-    -- DEFINE THE CURRENT_STATE AND NEXT_STATE OF THE FSM
-    signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
 
     -- DEFINE THE TEMP SIGNAL USED TO ATTACH THE OUTPUT OF FINAL COMBINATIONAL CIRCUIT TO THE SHIF-REGISTERS
     signal TEMP_S_OUTPUT1: std_logic := '0';
@@ -54,25 +54,20 @@ begin
     begin 
         if(rising_edge(clk)) then
             CURRENT_STATE <= NEXT_STATE;
-            pulse_contoller <= '0';
         end if;
     end process;
 
     -- PROCESS TO DESCRIBE THE NEXT_STATE GENERATOR COMBINATIONAL CIRCUIT
-    CC1: process(CURRENT_STATE, input_P)
+    CC1: process(clk, CURRENT_STATE, input_P)
     begin 
         case CURRENT_STATE is 
             when START =>
                 if(rising_edge(input_P)) then
                     NEXT_STATE <= OUTPUT1_ENABLE_STATE;
-                else
-                    NEXT_STATE <= CURRENT_STATE;
                 end if;
             when OUTPUT1_ENABLE_STATE => 
                 if(falling_edge(clk)) then
                     NEXT_STATE <= OUTPUT2_ENABLE_STATE;
-                else 
-                    NEXT_STATE <= CURRENT_STATE;
                 end if;
             when OUTPUT2_ENABLE_STATE => 
                 if(input_P = '1') then

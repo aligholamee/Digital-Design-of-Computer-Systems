@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Tue Nov 21 13:13:03 2017
-# Process ID: 3104
+# Start of session at: Tue Nov 21 13:54:08 2017
+# Process ID: 14284
 # Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/sync_control_q3/sync_control_q3.runs/synth_1
 # Command line: vivado.exe -log SyncControl.vds -mode batch -messageDb vivado.pb -notrace -source SyncControl.tcl
 # Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/sync_control_q3/sync_control_q3.runs/synth_1/SyncControl.vds
