@@ -21,11 +21,12 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 entity LightControl is
     port(
-        time_i: in integer range 0 to 24;
-        sensor_input: in integer range 0 to 150;
+        time_i: in unsigned;
+        sensor_input: in unsigned;
         light_status: out std_logic;
         clk: in std_logic;
         rst: in std_logic
@@ -34,7 +35,7 @@ end LightControl;
 
 architecture FSM of LightControl is
     -- IMPLEMENTS THE 1 PROCESS FINITE STATE MACHINE 
-    type STATE_TYPE is (LIGHTS_OFF, LIGHTS_ON);
+    type STATE_TYPE is (LIGHTS_OFF, LIGHTS_ON, RECOVERY);
 
     -- STATE SIGNAL
     signal STATE: STATE_TYPE := LIGHTS_OFF;
@@ -45,9 +46,10 @@ architecture FSM of LightControl is
 
 begin
     -- COMPLETE IMPLEMENTATION IN 1 PROCESS ONLY
-    O_P: process(clk, sensor_input, light_status, STATE)
+    O_P: process(clk, sensor_input, light_status, STATE, rst)
          begin
             if(rising_edge(clk)) then
+                -- SYNCHRONOUS RESET
                 if(rst = '1') then
                         -- CHANGE THE STATE TO THE LIGHTS_OFF MODE
                     STATE <= LIGHTS_OFF;
@@ -55,45 +57,47 @@ begin
                 else    -- CONTROL THE STATE CHANGING STATUS
                     case STATE is 
                         when LIGHTS_OFF =>
-                            if(time_i <= 5 and time_i => 1) then 
+                            if(time_i <= "00101" and time_i => "00001") then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(time_i => 5 and time_i <= 8) then
-                                if(sensor_input > 100) then 
+                            elsif(time_i => "00101" and time_i <= "01000") then
+                                if(sensor_input > "01100100") then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(time_i => 8 and time_i <= 17) then
+                            elsif(time_i => "01000" and time_i <= "10001") then
                                 STATE <= LIGHTS_OFF;
                             else
-                                if(sensor_input > 100) then 
+                                if(sensor_input > "01100100") then 
                                     STATE <= LIGHTS_OFF;
                                 else
                                     STATE <= LIGHTS_ON;
+                                end if;
                             end if;
                         -- DUPLICATE
                         when LIGHTS_ON =>
-                            if(time_i <= 5 and time_i => 1) then 
+                            if(time_i <= "00101" and time_i => "00001") then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(time_i => 5 and time_i <= 8) then
-                                if(sensor_input > 100) then 
+                            elsif(time_i => "00101" and time_i <= "01000") then
+                                if(sensor_input > "01100100") then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(time_i => 8 and time_i <= 17) then
+                            elsif(time_i => "01000" and time_i <= "10001") then
                                 STATE <= LIGHTS_OFF;
                             else
-                                if(sensor_input > 100) then 
+                                if(sensor_input > "01100100") then 
                                     STATE <= LIGHTS_OFF;
                                 else
                                     STATE <= LIGHTS_ON;
+                                end if;
                             end if;
                         -- RECOVERY STATE
                         when RECOVERY => 
