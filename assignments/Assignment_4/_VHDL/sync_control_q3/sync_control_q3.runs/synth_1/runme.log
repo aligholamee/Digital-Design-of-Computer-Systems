@@ -1,0 +1,30 @@
+
+*** Running vivado
+    with args -log SyncControl.vds -m64 -mode batch -messageDb vivado.pb -notrace -source SyncControl.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source SyncControl.tcl -notrace
+Command: synth_design -top SyncControl -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 306.207 ; gain = 135.047
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] state is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/sync_control_q3/sync_control_q3.srcs/sources_1/new/sync_control_fsm.vhd:40]
+ERROR: [Synth 8-1031] pulse_contoller is not declared [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/sync_control_q3/sync_control_q3.srcs/sources_1/new/sync_control_fsm.vhd:56]
+INFO: [Synth 8-2810] unit fsm ignored due to previous errors [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/sync_control_q3/sync_control_q3.srcs/sources_1/new/sync_control_fsm.vhd:35]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 333.332 ; gain = 162.172
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 21 13:13:10 2017...

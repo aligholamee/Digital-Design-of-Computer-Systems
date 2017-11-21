@@ -37,7 +37,8 @@ architecture FSM of SyncControl is
 
     -- DEFINE THE RECOVERY STATE FOR THE SAFE FSM
     attribute safe_recovery_state: string;
-    attribute safe_recovery_state of STATE: signal is "RECOVERY";
+    attribute safe_recovery_state of CURRENT_STATE: signal is "RECOVERY";
+    attribute safe_recovery_state of NEXT_STATE: signal is "RECOVERY";
 
     -- DEFINE THE CURRENT_STATE AND NEXT_STATE OF THE FSM
     signal CURRENT_STATE, NEXT_STATE: STATE_TYPE := START;
