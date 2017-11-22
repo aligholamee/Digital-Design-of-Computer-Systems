@@ -40,7 +40,7 @@ end DiskController;
 
 architecture FSM of DiskController is
     -- DEFINITION OF THE STATE_TYPE
-    type STATE_TYPE is (NO_SERIVCE, SERVICE, RECOVERY);
+    type STATE_TYPE is (NO_SERVICE, S1_SERVICE, S2_SERVICE, S3_SERVICE, S4_SERVICE, RECOVERY);
 
     -- IMPLEMENTS THE WHOLE FSM USING 1 PROCESS 
     signal STATE: STATE_TYPE := NO_SERVICE;
@@ -66,55 +66,88 @@ begin
                     file_output <= std_logic_vector(to_unsigned(0, 32));
                 else 
                     case STATE is 
-                        when NO_SERIVCE => 
-                            if(SERVICE_DIRECTION = '0') then 
-                                if(service_request_1 = '1') then
-                                    STATE <= SERVICE;
+                        -- THIS IS THE STARTING POINT OBVIOUSLY
+                        -- THEREFORE ALL OF THE REQUESTS WILL BE CHECKED AT FIRST
+                        -- AND THE DIRECTION WILL BE CONFIGURED :)
+                    when NO_SERIVCE => 
+                            if(service_request_1 = '1') then
+                                STATE <= S1_SERVICE;
+                                -- RESPONSES UPWARDS
+                                SERVICE_DIRECTION <= '0';
 
-                                elsif(service_request_2 = '1') then
-                                    STATE <= SERVICE;
+                            elsif(service_request_2 = '1') then
+                                STATE <= S2_SERVICE;
+                                -- RESPONSES UPWARDS
+                                SERVICE_DIRECTION <= '0';
 
-                                elsif(service_request_3 = '1') then 
-                                    STATE <= SERVICE;
+                            elsif(service_request_3 = '1') then 
+                                STATE <= S3_SERVICE;
+                                -- RESPONSES DOWNWARDS
+                                SERVICE_DIRECTION <= '1';
 
-                                elsif(service_request_4 = '1') then
-                                    STATE <= SERVICE;
+                            elsif(service_request_4 = '1') then
+                                STATE <= S4_SERVICE;
+                                -- RESPONSES DOWNWARDS
+                                SERVICE_DIRECTION <= '1';
 
-                                else
+                            else
+                                STATE <= NO_SERVICE;
+                                file_output <= '-';
+                                
+                            end if;
+
+                        when S1_SERVICE => 
+                            -- DOUBLE CHECK THE REQUEST FOR SECURITY REASONS(ROBUST IMPLEMENTATION AGAINST THE NOISE)
+                            if(service_request_1 = '1') then
+                                file_output <= FILESERVER(service_port_1); 
+                                service_request_1 <= '0';
+                                if(SERVICE_DIRECTION = '0') then 
+                                    STATE <= S2_SERVICE;
+                                else 
                                     STATE <= NO_SERVICE;
-                                    file_output <= '-';
-                                    
+                                end if;
+                            end if;
+                        
+                        when S2_SERVICE => 
+                            -- DOUBLE CHECK THE REQUEST FOR SECURITY REASONS(ROBUST IMPLEMENTATION AGAINST THE NOISE)
+                            if(service_request_2 = '1') then
+                                file_output <= FILESERVER(service_port_2);
+                                service_request_2 <= '0';
+
+                                if(SERVICE_DIRECTION = '0') then
+                                    STATE <= S3_SERVICE;
+                                else
+                                    STATE <= S1_SERVICE;
+
+                                end if;
+                            end if;
+                        
+                        when S3_SERVICE => 
+                            -- DOUBLE CHECK THE REQUEST FOR SECURITY REASONS(ROBUST IMPLEMENTATION AGAINST THE NOISE)
+                            if(service_request_3 = '1') then
+                                file_output <= FILESERVER(service_port_3);
+                                service_request_3 <= '0';
+
+                                if(SERVICE_DIRECTION = '0') then
+                                    STATE <= S4_SERVICE;
+                                else
+                                    STATE <= S2_SERVICE;
+                            end if;
+                        
+                        when S4_SERVICE =>
+                            -- DOUBLE CHECK THE REQUEST FOR SECURITY REASONS(ROBUST IMPLEMENTATION AGAINST THE NOISE)
+                            if(service_request_4 = '1') then
+                                file_output <= FILESERVER(service_port_4);
+                                service_request_4 <= '0';
+
+                                if(SERVICE_DIRECTION = '0') then
+                                    STATE <= NO_SERVICE;
+                                else
+                                    STATE <= S3_SERVICE;
+
                                 end if;
                             end if;
 
-                        when SERVICE => 
-                            if(SERVICE_DIRECTION = '0') then 
-                                if(service_request_1 = '1') then
-                                    STATE <= NO_SERVICE;
-                                    file_output <= FILESERVER(service_port_1);  -- THIS WILL GENERATE A LATCH FOR SURE
-                                    service_request_1 <= '0';
-
-                                elsif(service_request_2 = '1') then
-                                    STATE <= NO_SERVICE;
-                                    file_output <= FILESERVER(service_port_2);
-                                    service_request_2 <= '0';
-
-                                elsif(service_request_3 = '1') then 
-                                    STATE <= NO_SERVICE;
-                                    file_output <= FILESERVER(service_port_3);
-                                    service_request_3 <= '0';
-
-                                elsif(service_request_4 = '1') then
-                                    STATE <= NO_SERVICE;
-                                    file_output <= FILESERVER(service_port_4);
-                                    service_request_4 <= '0';
-
-                                else
-                                    STATE <= NO_SERVICE;
-                                    file_output <= '-';
-                                    
-                                end if;
-                            end if;
                         when RECOVERY =>
                                 STATE <= NO_SERVICE;
                     end case;
