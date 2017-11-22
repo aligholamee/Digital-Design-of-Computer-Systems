@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_numeric.all;
+use IEEE.numeric_std.all;
 
 entity DiskController is
     port(
