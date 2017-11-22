@@ -56,6 +56,7 @@ architecture FSM of DiskController is
     -- IMPLEMENTATION OF THE FILES
     type FILETYPE is array(127 downto 0) of std_logic_vector(31 downto 0);
 
+    
     signal FILESERVER: FILETYPE;
 begin
     O_P: process(clk)
@@ -92,7 +93,6 @@ begin
 
                             else
                                 STATE <= NO_SERVICE;
-                                file_output <= "-";
                                 
                             end if;
 
@@ -101,11 +101,12 @@ begin
                             if(service_request_1 = '1') then
                                 file_output <= FILESERVER(service_port_1); 
                                 service_request_1 <= '0';
-                                if(SERVICE_DIRECTION = '0') then 
-                                    STATE <= S2_SERVICE;
-                                else 
-                                    STATE <= NO_SERVICE;
-                                end if;
+                            end if;
+                            
+                            if(SERVICE_DIRECTION = '0') then 
+                                STATE <= S2_SERVICE;
+                            else 
+                                STATE <= NO_SERVICE;
                             end if;
                         
                         when S2_SERVICE => 
@@ -113,13 +114,13 @@ begin
                             if(service_request_2 = '1') then
                                 file_output <= FILESERVER(service_port_2);
                                 service_request_2 <= '0';
+                            end if;
 
-                                if(SERVICE_DIRECTION = '0') then
-                                    STATE <= S3_SERVICE;
-                                else
-                                    STATE <= S1_SERVICE;
+                            if(SERVICE_DIRECTION = '0') then
+                                STATE <= S3_SERVICE;
+                            else
+                                STATE <= S1_SERVICE;
 
-                                end if;
                             end if;
                         
                         when S3_SERVICE => 
@@ -127,12 +128,12 @@ begin
                             if(service_request_3 = '1') then
                                 file_output <= FILESERVER(service_port_3);
                                 service_request_3 <= '0';
+                            end if;
 
-                                if(SERVICE_DIRECTION = '0') then
-                                    STATE <= S4_SERVICE;
-                                else
-                                    STATE <= S2_SERVICE;
-                                end if;
+                            if(SERVICE_DIRECTION = '0') then
+                                STATE <= S4_SERVICE;
+                            else
+                                STATE <= S2_SERVICE;
                             end if;
                         
                         when S4_SERVICE =>
@@ -140,13 +141,14 @@ begin
                             if(service_request_4 = '1') then
                                 file_output <= FILESERVER(service_port_4);
                                 service_request_4 <= '0';
+                            end if;
 
-                                if(SERVICE_DIRECTION = '0') then
-                                    STATE <= NO_SERVICE;
-                                else
-                                    STATE <= S3_SERVICE;
+                            if(SERVICE_DIRECTION = '0') then
+                                STATE <= NO_SERVICE;
+                            else
+                                STATE <= S3_SERVICE;
 
-                                end if;
+                            
                             end if;
 
                         when RECOVERY =>

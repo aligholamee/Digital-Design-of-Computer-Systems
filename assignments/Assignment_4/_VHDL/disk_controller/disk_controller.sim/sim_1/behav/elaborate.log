@@ -1,0 +1,14 @@
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto da5593dbcdba4f568e5dc579b08db2c0 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DiskController_behav xil_defaultlib.DiskController -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture fsm of entity xil_defaultlib.diskcontroller
+Built simulation snapshot DiskController_behav

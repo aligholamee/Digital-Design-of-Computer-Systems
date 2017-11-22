@@ -1,0 +1,1 @@
+-wto "da5593dbcdba4f568e5dc579b08db2c0" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "DiskController_behav" "xil_defaultlib.DiskController" -log "elaborate.log" 
