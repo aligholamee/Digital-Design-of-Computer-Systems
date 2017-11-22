@@ -40,14 +40,14 @@ end DiskController;
 
 architecture FSM of DiskController is
     -- DEFINITION OF THE STATE_TYPE
-    type STATE_TYPE is (START, P1_SERVICE, P2_SERVICE, P3_SERVICE, P4_SERVICE);
+    type STATE_TYPE is (NO_SERIVCE, SERVICE, RECOVERY);
 
+    -- IMPLEMENTS THE WHOLE FSM USING 1 PROCESS 
+    signal STATE: STATE_TYPE := NO_SERVICE;
+    
     -- IMPLEMENTS THE SAFE FSM CREDINTIALS
     attribute safe_recovery_state: string;
     attribute safe_recovery_state of STATE: signal is "RECOVERY";
-
-    -- IMPLEMENTS THE WHOLE FSM USING 1 PROCESS 
-    signal STATE: STATE_TYPE := START;
 
     -- IMPLEMENTS THE DIRECTION OF SERVICE(0: PORT1 TO PORT4)(1: PORT4 DOWNTO PORT0)
     signal SERVICE_DIRECTION: std_logic := '0';
@@ -66,33 +66,57 @@ begin
                     file_output <= std_logic_vector(to_unsigned(0, 32));
                 else 
                     case STATE is 
-                        when START => 
+                        when NO_SERIVCE => 
                             if(SERVICE_DIRECTION = '0') then 
                                 if(service_request_1 = '1') then
-                                    STATE <= P1_SERVICE;
-                                    -- GRAB THE ADDERS 
-                                    -- GRAB THE DATA 
-                                    -- PUT IT ON THE file_output
-                                elsif(service_request_2 = '1') then
-                                    STATE <= P2_SERVICE;
-                                    -- GRAB THE ADDERS 
-                                    -- GRAB THE DATA 
-                                    -- PUT IT ON THE file_output
-                                elsif(service_request_3 = '1') then 
-                                    STATE <= P3_SERVICE;
-                                    -- GRAB THE ADDERS 
-                                    -- GRAB THE DATA 
-                                    -- PUT IT ON THE file_output
-                                elseif(service_request_4 = '1') then
-                                    STATE <= P4_SERVICE;
-                                    -- GRAB THE ADDERS 
-                                    -- GRAB THE DATA 
-                                    -- PUT IT ON THE file_output
-                                else
-                                    STATE <= START;
-                                    file_output <= '-';
-                                end if;
-                            
-         end process;
+                                    STATE <= SERVICE;
 
+                                elsif(service_request_2 = '1') then
+                                    STATE <= SERVICE;
+
+                                elsif(service_request_3 = '1') then 
+                                    STATE <= SERVICE;
+
+                                elsif(service_request_4 = '1') then
+                                    STATE <= SERVICE;
+
+                                else
+                                    STATE <= NO_SERVICE;
+                                    file_output <= '-';
+                                    
+                                end if;
+                            end if;
+
+                        when SERVICE => 
+                            if(SERVICE_DIRECTION = '0') then 
+                                if(service_request_1 = '1') then
+                                    STATE <= NO_SERVICE;
+                                    file_output <= FILESERVER(service_port_1);  -- THIS WILL GENERATE A LATCH FOR SURE
+                                    service_request_1 <= '0';
+
+                                elsif(service_request_2 = '1') then
+                                    STATE <= NO_SERVICE;
+                                    file_output <= FILESERVER(service_port_2);
+                                    service_request_2 <= '0';
+
+                                elsif(service_request_3 = '1') then 
+                                    STATE <= NO_SERVICE;
+                                    file_output <= FILESERVER(service_port_3);
+                                    service_request_3 <= '0';
+
+                                elsif(service_request_4 = '1') then
+                                    STATE <= NO_SERVICE;
+                                    file_output <= FILESERVER(service_port_4);
+                                    service_request_4 <= '0';
+
+                                else
+                                    STATE <= NO_SERVICE;
+                                    file_output <= '-';
+                                    
+                                end if;
+                            end if;
+                        when RECOVERY =>
+                                STATE <= NO_SERVICE;
+                    end case;
+         end process;
 end FSM;
