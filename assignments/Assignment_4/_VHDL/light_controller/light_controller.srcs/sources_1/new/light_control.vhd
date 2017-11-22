@@ -25,8 +25,8 @@ use IEEE.numeric_std.all;
 
 entity LightControl is
     port(
-        time_i: in unsigned;
-        sensor_input: in unsigned;
+        time_i: in integer range 0 to 24;
+        sensor_input: in integer range 0 to 150;
         light_status: out std_logic;
         clk: in std_logic;
         rst: in std_logic
@@ -46,7 +46,7 @@ architecture FSM of LightControl is
 
 begin
     -- COMPLETE IMPLEMENTATION IN 1 PROCESS ONLY
-    O_P: process(clk, sensor_input, light_status, STATE, rst)
+    O_P: process(clk, sensor_input, STATE, rst)
          begin
             if(rising_edge(clk)) then
                 -- SYNCHRONOUS RESET
@@ -57,21 +57,21 @@ begin
                 else    -- CONTROL THE STATE CHANGING STATUS
                     case STATE is 
                         when LIGHTS_OFF =>
-                            if(time_i <= "00101" and time_i => "00001") then 
+                            if(to_unsigned(time_i,5) <= 5 and to_unsigned(time_i,5) => 1) then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(time_i => "00101" and time_i <= "01000") then
-                                if(sensor_input > "01100100") then 
+                            elsif(to_unsigned(time_i,5) => 5 and to_unsigned(time_i,5) <= 8) then
+                                if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(time_i => "01000" and time_i <= "10001") then
+                            elsif(to_unsigned(time_i,5) => 8 and to_unsigned(time_i,5) <= 17) then
                                 STATE <= LIGHTS_OFF;
                             else
-                                if(sensor_input > "01100100") then 
+                                if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                 else
                                     STATE <= LIGHTS_ON;
@@ -79,21 +79,21 @@ begin
                             end if;
                         -- DUPLICATE
                         when LIGHTS_ON =>
-                            if(time_i <= "00101" and time_i => "00001") then 
+                            if(to_unsigned(time_i,5) <= 5 and to_unsigned(time_i,5) => 1) then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(time_i => "00101" and time_i <= "01000") then
-                                if(sensor_input > "01100100") then 
+                            elsif(to_unsigned(time_i,5) => 5 and to_unsigned(time_i,5) <= 8) then
+                                if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(time_i => "01000" and time_i <= "10001") then
+                            elsif(to_unsigned(time_i,5) => 8 and to_unsigned(time_i,5) <= 17) then
                                 STATE <= LIGHTS_OFF;
                             else
-                                if(sensor_input > "01100100") then 
+                                if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                 else
                                     STATE <= LIGHTS_ON;
