@@ -102,11 +102,11 @@ begin
                                 file_output <= FILESERVER(service_port_1); 
                                 service_request_1 <= '0';
                             end if;
-                            
+
                             if(SERVICE_DIRECTION = '0') then 
                                 STATE <= S2_SERVICE;
                             else 
-                                STATE <= NO_SERVICE;
+                                STATE <= S4_SERVICE;
                             end if;
                         
                         when S2_SERVICE => 
@@ -144,7 +144,7 @@ begin
                             end if;
 
                             if(SERVICE_DIRECTION = '0') then
-                                STATE <= NO_SERVICE;
+                                STATE <= S1_SERVICE;
                             else
                                 STATE <= S3_SERVICE;
 
