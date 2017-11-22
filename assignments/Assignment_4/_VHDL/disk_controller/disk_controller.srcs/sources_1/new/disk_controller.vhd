@@ -69,7 +69,7 @@ begin
                         -- THIS IS THE STARTING POINT OBVIOUSLY
                         -- THEREFORE ALL OF THE REQUESTS WILL BE CHECKED AT FIRST
                         -- AND THE DIRECTION WILL BE CONFIGURED :)
-                    when NO_SERIVCE => 
+                    when NO_SERVICE => 
                             if(service_request_1 = '1') then
                                 STATE <= S1_SERVICE;
                                 -- RESPONSES UPWARDS
