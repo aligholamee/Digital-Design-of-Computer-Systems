@@ -1,0 +1,5 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../disk_controller.srcs/sources_1/new/disk_controller.vhd"
+
+# Do not sort compile order
+nosort
