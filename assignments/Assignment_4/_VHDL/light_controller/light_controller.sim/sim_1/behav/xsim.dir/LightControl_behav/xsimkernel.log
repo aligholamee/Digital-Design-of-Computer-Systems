@@ -1,4 +1,7 @@
-Running: xsim.dir/LightControl_behav/xsimk.exe -simmode gui -wdb LightControl_behav.wdb -simrunnum 0 -socket 50680
+Running: xsim.dir/LightControl_behav/xsimk.exe -simmode gui -wdb LightControl_behav.wdb -simrunnum 0 -socket 50686
 Design successfully loaded
-Design Loading Memory Usage: 22996 KB (Peak: 22996 KB)
-Design Loading CPU Usage: 140 ms
+Design Loading Memory Usage: 22868 KB (Peak: 22868 KB)
+Design Loading CPU Usage: 109 ms
+Simulation completed
+Simulation Memory Usage: 23104 KB (Peak: 23104 KB)
+Simulation CPU Usage: 156 ms
