@@ -53,14 +53,13 @@ begin
                 if(rst = '1') then
                         -- CHANGE THE STATE TO THE LIGHTS_OFF MODE
                     STATE <= LIGHTS_OFF;
-                    light_status <= '0';
                 else    -- CONTROL THE STATE CHANGING STATUS
                     case STATE is 
                         when LIGHTS_OFF =>
-                            if(to_unsigned(time_i,5) <= 5 and to_unsigned(time_i,5) => 1) then 
+                            if(time_i< 5 and time_i > 1) then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(to_unsigned(time_i,5) => 5 and to_unsigned(time_i,5) <= 8) then
+                            elsif(time_i > 5 and time_i < 8) then
                                 if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
@@ -68,7 +67,7 @@ begin
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(to_unsigned(time_i,5) => 8 and to_unsigned(time_i,5) <= 17) then
+                            elsif(time_i > 8 and time_i < 17) then
                                 STATE <= LIGHTS_OFF;
                             else
                                 if(sensor_input > 100) then 
@@ -79,10 +78,10 @@ begin
                             end if;
                         -- DUPLICATE
                         when LIGHTS_ON =>
-                            if(to_unsigned(time_i,5) <= 5 and to_unsigned(time_i,5) => 1) then 
+                            if(time_i < 5 and time_i > 1) then 
                                 STATE <= LIGHTS_OFF;
                                 light_status <= '0';
-                            elsif(to_unsigned(time_i,5) => 5 and to_unsigned(time_i,5) <= 8) then
+                            elsif(time_i > 5 and time_i < 8) then
                                 if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
                                     light_status <= '0';
@@ -90,7 +89,7 @@ begin
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
                                 end if;
-                            elsif(to_unsigned(time_i,5) => 8 and to_unsigned(time_i,5) <= 17) then
+                            elsif(time_i > 8 and time_i < 17) then
                                 STATE <= LIGHTS_OFF;
                             else
                                 if(sensor_input > 100) then 
@@ -106,4 +105,17 @@ begin
                 end if;
             end if;
          end process;
+    S_P: process(STATE)
+         begin
+            case STATE is 
+                when LIGHTS_OFF => 
+                    light_status <= '0';
+                
+                when LIGHTS_ON =>
+                    light_status <= '1';
+                    
+                when RECOVERY =>
+                    light_status <= '0';
+            end case;
+        end process;
 end FSM;

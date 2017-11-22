@@ -1,0 +1,1 @@
+-wto "f237ddb7e6aa4b89a6b063c6bdd08190" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "LightControl_behav" "xil_defaultlib.LightControl" -log "elaborate.log" 
