@@ -1,12 +1,12 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Wed Nov 22 09:32:03 2017
+| Date         : Wed Nov 22 09:43:40 2017
 | Host         : DESKTOP-TJ9Q1DD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TrafficLight_utilization_synth.rpt -pb TrafficLight_utilization_synth.pb
 | Design       : TrafficLight
 | Device       : 7vx485tffg1157-1
-| Design State : Fully Placed
+| Design State : Synthesized
 -------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
@@ -15,15 +15,14 @@ Table of Contents
 -----------------
 1. Slice Logic
 1.1 Summary of Registers by Type
-2. Slice Logic Distribution
-3. Memory
-4. DSP
-5. IO and GT Specific
-6. Clocking
-7. Specific Feature
-8. Primitives
-9. Black Boxes
-10. Instantiated Netlists
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
 
 1. Slice Logic
 --------------
@@ -31,15 +30,16 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |    0 |     0 |    303600 |  0.00 |
-|   LUT as Logic          |    0 |     0 |    303600 |  0.00 |
+| Slice LUTs*             |   17 |     0 |    303600 | <0.01 |
+|   LUT as Logic          |   17 |     0 |    303600 | <0.01 |
 |   LUT as Memory         |    0 |     0 |    130800 |  0.00 |
-| Slice Registers         |    0 |     0 |    607200 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |    607200 |  0.00 |
+| Slice Registers         |   14 |     0 |    607200 | <0.01 |
+|   Register as Flip Flop |   14 |     0 |    607200 | <0.01 |
 |   Register as Latch     |    0 |     0 |    607200 |  0.00 |
 | F7 Muxes                |    0 |     0 |    151800 |  0.00 |
 | F8 Muxes                |    0 |     0 |     75900 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
 1.1 Summary of Registers by Type
@@ -57,30 +57,11 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 14    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
-2. Slice Logic Distribution
----------------------------
-
-+-------------------------------------------------------------+---------+-------+-----------+-------+
-|                          Site Type                          |   Used  | Fixed | Available | Util% |
-+-------------------------------------------------------------+---------+-------+-----------+-------+
-| Slice                                                       |       0 |     0 |     75900 |  0.00 |
-|   SLICEL                                                    |       0 |     0 |           |       |
-|   SLICEM                                                    |       0 |     0 |           |       |
-| LUT as Logic                                                |       0 |     0 |    303600 |  0.00 |
-| LUT as Memory                                               |       0 |     0 |    130800 |  0.00 |
-|   LUT as Distributed RAM                                    |       0 |     0 |           |       |
-|   LUT as Shift Register                                     |       0 |     0 |           |       |
-| LUT Flip Flop Pairs                                         |       0 |     0 |    303600 |  0.00 |
-| Unique Control Sets                                         |       0 |       |           |       |
-| Minimum number of registers lost to control set restriction | 0(Lost) |       |           |       |
-+-------------------------------------------------------------+---------+-------+-----------+-------+
-
-
-3. Memory
+2. Memory
 ---------
 
 +----------------+------+-------+-----------+-------+
@@ -93,7 +74,7 @@ Table of Contents
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
 
-4. DSP
+3. DSP
 ------
 
 +-----------+------+-------+-----------+-------+
@@ -103,13 +84,13 @@ Table of Contents
 +-----------+------+-------+-----------+-------+
 
 
-5. IO and GT Specific
+4. IO and GT Specific
 ---------------------
 
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |       600 |  0.33 |
+| Bonded IOB                  |    5 |     0 |       600 |  0.83 |
 | Bonded IPADs                |    0 |     0 |        62 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        40 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        14 |  0.00 |
@@ -130,13 +111,13 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 
 
-6. Clocking
+5. Clocking
 -----------
 
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        56 |  0.00 |
 | MMCME2_ADV |    0 |     0 |        14 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |        14 |  0.00 |
@@ -146,7 +127,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 
 
-7. Specific Feature
+6. Specific Feature
 -------------------
 
 +-------------+------+-------+-----------+-------+
@@ -164,17 +145,26 @@ Table of Contents
 +-------------+------+-------+-----------+-------+
 
 
-8. Primitives
+7. Primitives
 -------------
 
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUFT    |    2 |                  IO |
+| FDRE     |   14 |        Flop & Latch |
+| LUT5     |    6 |                 LUT |
+| LUT4     |    5 |                 LUT |
+| LUT6     |    4 |                 LUT |
+| LUT3     |    3 |                 LUT |
+| IBUF     |    3 |                  IO |
+| OBUF     |    2 |                  IO |
+| LUT2     |    2 |                 LUT |
+| LUT1     |    2 |                 LUT |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
-9. Black Boxes
+8. Black Boxes
 --------------
 
 +----------+------+
@@ -182,8 +172,8 @@ Table of Contents
 +----------+------+
 
 
-10. Instantiated Netlists
--------------------------
+9. Instantiated Netlists
+------------------------
 
 +----------+------+
 | Ref Name | Used |
