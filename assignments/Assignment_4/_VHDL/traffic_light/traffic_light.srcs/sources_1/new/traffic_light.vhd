@@ -33,16 +33,16 @@ end TrafficLight;
 
 architecture FSM of TrafficLight is
     -- IMPLEMENTS THE 1 PROCESS FINITE STATE MACHINE 
-    type STATE_TYPE is (GREEN_LIGHT, YELLOW_LIGHT, RED_LIGHT); 
-
-    -- IMPLEMENTS THE SAFE FSM CREDINTIALS
-    attribute safe_recovery_state: string;
-    attribute safe_recovery_state of STATE: signal is "RECOVERY";
+    type STATE_TYPE is (GREEN_LIGHT, YELLOW_LIGHT, RED_LIGHT, RECOVERY); 
 
     -- STATE SIGNAL 
     signal STATE: STATE_TYPE := GREEN_LIGHT;
     signal YELLOW_PULSE: integer range 0 to 30;
     signal RED_PULSE: integer range 0 to 100;
+
+    -- IMPLEMENTS THE SAFE FSM CREDINTIALS
+    attribute safe_recovery_state: string;
+    attribute safe_recovery_state of STATE: signal is "RECOVERY";
 begin
     O_P: process(clk)
          begin 
@@ -59,7 +59,7 @@ begin
                                 STATE <= YELLOW_LIGHT;
                             end if;
                         when YELLOW_LIGHT => 
-                            if(YELLOW_PULSE = 30) 
+                            if(YELLOW_PULSE = 30) then
                                 -- GO TO THE RED STATE
                                 -- THE COUNTER FOR THE RED LIGHT STARTS HERE
                                 STATE <= RED_LIGHT;
@@ -74,10 +74,29 @@ begin
                             else 
                                 RED_PULSE <= RED_PULSE + 1;
                                 STATE <= RED_LIGHT;
+                            end if;
                         when RECOVERY => 
                             -- GREEN LIGHT AT THIS MOMENT COULD BE DANGEROUS :D
                             STATE <= RED_LIGHT;
+                    end case;
                 end if;
             end if;
          end process;
+    
+    O_C: process(STATE)
+    begin 
+        case STATE is 
+            when GREEN_LIGHT =>
+                output_color <= "00";
+
+            when YELLOW_LIGHT =>
+                output_color <= "01";
+
+            when RED_LIGHT =>
+                output_color <= "10";
+            
+            when RECOVERY =>    
+                output_color <= "11";
+        end case;   
+    end process;
 end FSM;
