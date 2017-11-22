@@ -58,14 +58,11 @@ begin
                         when LIGHTS_OFF =>
                             if(time_i< 5 and time_i > 1) then 
                                 STATE <= LIGHTS_OFF;
-                                light_status <= '0';
                             elsif(time_i > 5 and time_i < 8) then
                                 if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
-                                    light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
-                                    light_status <= '1';
                                 end if;
                             elsif(time_i > 8 and time_i < 17) then
                                 STATE <= LIGHTS_OFF;
@@ -80,11 +77,9 @@ begin
                         when LIGHTS_ON =>
                             if(time_i < 5 and time_i > 1) then 
                                 STATE <= LIGHTS_OFF;
-                                light_status <= '0';
                             elsif(time_i > 5 and time_i < 8) then
                                 if(sensor_input > 100) then 
                                     STATE <= LIGHTS_OFF;
-                                    light_status <= '0';
                                 else 
                                     STATE <= LIGHTS_ON;
                                     light_status <= '1';
