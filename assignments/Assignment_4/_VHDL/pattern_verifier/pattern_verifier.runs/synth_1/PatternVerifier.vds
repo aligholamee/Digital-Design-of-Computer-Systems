@@ -1,0 +1,466 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Nov 27 19:13:34 2017
+# Process ID: 1100
+# Current directory: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.runs/synth_1
+# Command line: vivado.exe -log PatternVerifier.vds -mode batch -messageDb vivado.pb -notrace -source PatternVerifier.tcl
+# Log file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.runs/synth_1/PatternVerifier.vds
+# Journal file: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source PatternVerifier.tcl -notrace
+Command: synth_design -top PatternVerifier -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 306.293 ; gain = 134.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PatternVerifier' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:36]
+WARNING: [Synth 8-614] signal 'flag' is read in the process but is not in the sensitivity list [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:74]
+WARNING: [Synth 8-614] signal 'v_founded' is read in the process but is not in the sensitivity list [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:228]
+WARNING: [Synth 8-614] signal 'u_founded' is read in the process but is not in the sensitivity list [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:228]
+INFO: [Synth 8-256] done synthesizing module 'PatternVerifier' (1#1) [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:36]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 334.422 ; gain = 163.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 334.422 ; gain = 163.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 334.422 ; gain = 163.070
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-802] inferred FSM for state register 'stateV_reg' in module 'PatternVerifier'
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_founded" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "v_founded" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateV" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  start2 |                              000 |                            01110
+                       a |                              001 |                            01111
+                      aa |                              010 |                            10000
+                     aac |                              011 |                            10011
+                     aag |                              100 |                            10001
+                    aagt |                              101 |                            10010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stateV_reg' using encoding 'sequential' in module 'PatternVerifier'
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[1]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[2]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[3]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[4]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[5]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[6]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[7]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[8]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[9]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_reg[10]' [C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:57]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 350.938 ; gain = 179.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      7 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	  15 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PatternVerifier 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      7 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	  15 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 611.004 ; gain = 439.652
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stateU" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 611.004 ; gain = 439.652
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 611.004 ; gain = 439.652
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[7][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[6][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[5][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[1][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[2][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[10][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[9][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sample_reg[8][6] )
+INFO: [Synth 8-3886] merging instance '\sample_reg[7][3] ' (LDC) to '\sample_reg[7][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[6][3] ' (LDC) to '\sample_reg[6][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[5][3] ' (LDC) to '\sample_reg[5][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[4][3] ' (LDC) to '\sample_reg[4][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[1][3] ' (LDC) to '\sample_reg[1][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[3][3] ' (LDC) to '\sample_reg[3][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[2][3] ' (LDC) to '\sample_reg[2][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[10][3] ' (LDC) to '\sample_reg[10][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[9][3] ' (LDC) to '\sample_reg[9][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[8][3] ' (LDC) to '\sample_reg[8][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[7][5] ' (LDC) to '\sample_reg[7][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[6][5] ' (LDC) to '\sample_reg[6][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[5][5] ' (LDC) to '\sample_reg[5][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[4][5] ' (LDC) to '\sample_reg[4][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[1][5] ' (LDC) to '\sample_reg[1][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[3][5] ' (LDC) to '\sample_reg[3][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[2][5] ' (LDC) to '\sample_reg[2][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[10][5] ' (LDC) to '\sample_reg[10][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[9][5] ' (LDC) to '\sample_reg[9][7] '
+INFO: [Synth 8-3886] merging instance '\sample_reg[8][5] ' (LDC) to '\sample_reg[8][7] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[7][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[6][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[5][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[10][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[9][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sample_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\stateU_reg[4] )
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[1][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[1][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[1][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[1][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[2][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[2][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[2][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[2][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[3][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[3][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[3][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[3][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[4][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[4][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[4][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[4][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[5][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[5][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[5][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[5][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[6][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[6][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[6][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[6][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[7][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[7][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[7][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[7][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[8][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[8][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[8][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[8][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[9][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[9][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[9][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[9][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[10][7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[10][6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[10][5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\sample_reg[10][3] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[4] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[8] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[9] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[10] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[11] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[12] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[13] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[14] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[15] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[16] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[17] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[18] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[19] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[20] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[21] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[22] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[23] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[24] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[25] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[26] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[27] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[28] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[29] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[30] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counter_reg[31] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\stateU_reg[4] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[4] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[5] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[6] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[7] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[8] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[9] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[10] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[11] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[12] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[13] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[14] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[15] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[16] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[17] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[18] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[19] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[20] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[21] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[22] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[23] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[24] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[25] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[26] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[27] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[28] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[29] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[30] ) is unused and will be removed from module PatternVerifier.
+WARNING: [Synth 8-3332] Sequential element (\counterV_reg[31] ) is unused and will be removed from module PatternVerifier.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     8|
+|4     |LUT2   |    50|
+|5     |LUT3   |     5|
+|6     |LUT4   |     4|
+|7     |LUT5   |     2|
+|8     |LUT6   |    37|
+|9     |MUXF7  |     3|
+|10    |FDRE   |    17|
+|11    |LDC    |    30|
+|12    |LDP    |    10|
+|13    |IBUF   |    22|
+|14    |OBUF   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   193|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 110 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 626.000 ; gain = 355.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 626.000 ; gain = 454.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  LDC => LDCE: 30 instances
+  LDP => LDPE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 690.285 ; gain = 491.152
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 690.285 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 27 19:13:55 2017...
