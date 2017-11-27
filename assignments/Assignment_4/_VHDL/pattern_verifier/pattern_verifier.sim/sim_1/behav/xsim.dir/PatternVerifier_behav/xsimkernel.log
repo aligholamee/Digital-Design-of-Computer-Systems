@@ -1,0 +1,7 @@
+Running: xsim.dir/PatternVerifier_behav/xsimk.exe -simmode gui -wdb PatternVerifier_behav.wdb -simrunnum 0 -socket 55438
+Design successfully loaded
+Design Loading Memory Usage: 22692 KB (Peak: 22692 KB)
+Design Loading CPU Usage: 124 ms
+Simulation completed
+Simulation Memory Usage: 22904 KB (Peak: 22904 KB)
+Simulation CPU Usage: 124 ms

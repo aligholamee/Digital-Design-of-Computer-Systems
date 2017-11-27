@@ -1,0 +1,5 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd"
+
+# Do not sort compile order
+nosort

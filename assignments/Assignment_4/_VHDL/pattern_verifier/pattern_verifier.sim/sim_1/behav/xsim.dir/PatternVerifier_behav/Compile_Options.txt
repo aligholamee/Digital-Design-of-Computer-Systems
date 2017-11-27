@@ -1,0 +1,1 @@
+-wto "6952746f267b429bb6b72a93a966c3c7" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "PatternVerifier_behav" "xil_defaultlib.PatternVerifier" -log "elaborate.log" 

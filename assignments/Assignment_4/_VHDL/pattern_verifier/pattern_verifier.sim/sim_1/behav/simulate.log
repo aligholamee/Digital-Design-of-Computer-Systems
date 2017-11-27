@@ -1,0 +1,7 @@
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+ERROR: Index 11 out of bound 1 to 10
+Time: 2600 ns  Iteration: 0  Process: /PatternVerifier/changeStates
+  File: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd
+
+HDL Line: C:/Users/Ali Gholami/Desktop/onGoing/Digital Design of Computer Systems/assignments/Assignment_4/_VHDL/pattern_verifier/pattern_verifier.srcs/sources_1/new/pattern_verifier.vhd:82
