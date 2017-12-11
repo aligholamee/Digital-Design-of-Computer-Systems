@@ -1,0 +1,3 @@
+Im here to let you know that all of the synthesis results (reports) can be found in "project_name.runs" folder with the extension of .rpt.
+Feel free to send me some notes about these designs.
+aligholamee@gmail.com
