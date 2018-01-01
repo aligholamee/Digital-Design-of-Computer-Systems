@@ -117,13 +117,14 @@ begin
                     -- READ THE PREVIOUS VALIE IN THOSE ADDRESSES
                     temp_read_ram2 <= ram_block(R_ADDR_S);
                     -- UPDATE THE OUTPUT VALUE OF R2 INSIDE RAM
-                    
+                    ram_block(R_ADDR_S) <= (temp_read_ram2(66 downto 64), R3_V, temp_read_ram2(31 downto 0)); 
                     -- UPDATE THE OUTPUT VALUE OF r2_p
-                    
-                    
-                    
-             
-               
-                
-            
+                    r2_p <= R3_V;
+               else
+                    -- NO CHANGE
+                    ram_block(R_ADDR_S) <= ram_block(R_ADDR_S);
+               end if;
+           end if;
+       end if;
+   end process;       
 end RTL;
