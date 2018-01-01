@@ -1,5 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../parking_lot.srcs/sources_1/new/parking_lot.vhd"
-
-# Do not sort compile order
-nosort

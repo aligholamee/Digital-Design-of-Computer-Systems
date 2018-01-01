@@ -1,1 +1,0 @@
--wto "6d9e2aaed872482998516308d2fbbca9" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "ParkingLot_behav" "xil_defaultlib.ParkingLot" -log "elaborate.log" 
