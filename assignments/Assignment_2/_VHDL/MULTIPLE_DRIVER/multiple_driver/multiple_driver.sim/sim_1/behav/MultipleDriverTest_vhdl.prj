@@ -1,5 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../multiple_driver.srcs/sources_1/new/MultipleDriverTest.vhd"
-
-# Do not sort compile order
-nosort

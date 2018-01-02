@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Jan 01 23:15:41 2018
+# Process ID: 8336
+# Current directory: C:/Users/Ali Gholami/Desktop/Desktop new/onGoing/Digital Design of Computer Systems/assignments/Assignment_6/_VHDL/Register_Controller/Register_Controller.runs/synth_1
+# Command line: vivado.exe -log RegisterController.vds -mode batch -messageDb vivado.pb -notrace -source RegisterController.tcl
+# Log file: C:/Users/Ali Gholami/Desktop/Desktop new/onGoing/Digital Design of Computer Systems/assignments/Assignment_6/_VHDL/Register_Controller/Register_Controller.runs/synth_1/RegisterController.vds
+# Journal file: C:/Users/Ali Gholami/Desktop/Desktop new/onGoing/Digital Design of Computer Systems/assignments/Assignment_6/_VHDL/Register_Controller/Register_Controller.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RegisterController.tcl -notrace

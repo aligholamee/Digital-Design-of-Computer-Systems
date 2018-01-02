@@ -1,7 +1,0 @@
-Running: xsim.dir/MultipleDriverTest_behav/xsimk.exe -simmode gui -wdb MultipleDriverTest_behav.wdb -simrunnum 0 -socket 58738
-Design successfully loaded
-Design Loading Memory Usage: 23540 KB (Peak: 23540 KB)
-Design Loading CPU Usage: 156 ms
-Simulation completed
-Simulation Memory Usage: 23744 KB (Peak: 23744 KB)
-Simulation CPU Usage: 171 ms

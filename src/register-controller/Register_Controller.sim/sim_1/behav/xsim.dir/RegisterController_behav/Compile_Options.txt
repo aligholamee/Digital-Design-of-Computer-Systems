@@ -1,0 +1,1 @@
+-wto "0fc3d5e2bac0434b9fece8f8eba8d2a4" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "RegisterController_behav" "xil_defaultlib.RegisterController" -log "elaborate.log" 

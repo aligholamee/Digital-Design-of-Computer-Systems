@@ -1,1 +1,0 @@
--wto "9fa87e8171cd4c4ca7910b565f9f5055" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "SyncControl_behav" "xil_defaultlib.SyncControl" -log "elaborate.log" 
